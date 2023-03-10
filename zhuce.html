@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.suning.com/favicon.ico" />
+    <title>欢迎进入 苏宁易购-苏宁云商网上商城，领先的综合网上购物商城，正品行货，全国联保，货到付款，让您尽享购物乐趣！,盲人用户进入智能盲道请按快捷键Ctrl+Alt+R；阅读详细操作说明请按快捷键Ctrl+Alt+问号键。
+    </title>
+</head>
+<style>
+    .logo {
+        position: relative;
+        left: 210px;
+        float: left;
+        top: 100px;
+    }
+
+    .zhu {
+        position: relative;
+        float: left;
+        font-size: 18px;
+        color: #666;
+        line-height: 65px;
+        left: 236px;
+        top: 100px;
+    }
+
+    #di {
+        width: 1000px;
+        height: 400px;
+        background-color: white;
+        border: 1px solid rgb(221, 221, 221);
+        border-top: 3px solid #f90;
+        padding: 80px 0;
+        margin: 100px auto;
+    }
+
+    input {
+        color: #cacaca;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        width: 285px;
+    }
+
+    #di div {
+        border: 1px solid rgb(221, 221, 221);
+        height: 38px;
+        width: 378px;
+        margin: auto;
+        margin-bottom: 25px;
+
+    }
+
+    label {
+        padding-left: 11px;
+        padding-right: 30px;
+        line-height: 38px;
+        font-size: 12px;
+        font-family: 微软雅黑;
+    }
+
+    #ce {
+        background-color: #f50;
+        cursor: pointer;
+        user-select: none;
+        opacity: .8;
+    }
+
+    #ce:hover {
+        opacity: 1;
+    }
+
+    #load a {
+        font-size: 12px;
+        text-decoration: none;
+        color: black;
+    }
+
+    #load a:hover {
+        color: #f50;
+    }
+
+    #load {
+        position: relative;
+        width: 150px;
+        left: 1075px;
+        top: 90px;
+    }
+</style>
+
+<body style="background-color:#f8f8f8;">
+    <div class="logo">
+        <a href="suning.html"><img src="https://res.suning.cn/project/passport/login/b2c_V7/image/header190-60.png"></a>
+    </div>
+    <div class="zhu">欢迎注册</div>
+    <div id="load">
+        <a href="load.html">我已经注册，马上登录></a>
+    </div>
+    <div id="di">
+        <div><label for="1">用户名</label><input type="text" value="请输入用户名" id="1"></div>
+        <div><label for="2">手机号码</label><input type="text" value="建议使用常用的手机号" id="2"></div>
+        <!-- <div><label for="2">手机验证码</label><input type="text" value="请输入手机验证码" id="2"></div> -->
+        <div><label for="3">设置密码</label><input type="text" id="3" value="请输入密码"></div>
+        <div><label for="4">设置密保问题</label><input type="text" id="4"
+                style="font-size: 14px; color: black; width: 220px;"></div>
+        <div style="margin-bottom: 70px;"><label for="5">设置密保问题的答案</label><input type="text" id="5"
+                style="font-size: 14px; color: black; width: 220px;"></div>
+        <div id="ce" style="color: white; font-size: 20px; text-align: center; line-height: 38px;">提交注册</div>
+</body>
+<script>
+    let use = document.getElementById('1');
+    let num = document.getElementById('2');
+    let pass = document.getElementById('3');
+    let que = document.getElementById('4');
+    let ans = document.getElementById('5');
+    let sub = document.getElementById('ce');
+    function Level(password) {
+        let pass = Array.from(password);
+        var Level = 0;
+        if (pass.length < 8) {
+            return 0;
+        }
+        else {
+            var a = new Array(0, 0, 0);
+            for (var i = 0; i < pass.length; i++) {
+                if (pass[i] >= 0 && pass[i] <= 9) {
+                    a[0] = 1;
+                }
+                else if (pass[i] >= 'a' && pass[i] <= 'z' || pass[i] >= 'A' && pass[i] <= 'Z') {
+                    a[1] = 1;
+                }
+                else {
+                    a[2] = 1;
+                }
+            }
+            for (var i = 0; i < a.length; i++) {
+                if (a[i] == 1) {
+                    Level++;
+                }
+            }
+            return Level;
+        }
+    }
+    let a = function (k) {
+        k.style.fontSize = '14px';
+        k.value = "";
+        k.style.color = 'black';
+    }
+    let b = function (k, q) {
+        k.style.fontSize = '12px';
+        k.value = q + '';
+        k.style.color = "rgb(221,221,221)";
+    }
+    let user = use.addEventListener('focus', () => {
+        if (use.style.color != 'black') {
+            a(use);
+        }
+    })
+    let unuser = use.addEventListener('blur', () => {
+        if (use.value == "") {
+            b(use, "请输入用户名");
+        }
+    })
+    let number = num.addEventListener('focus', () => {
+        if (num.style.color != 'black') {
+            a(num);
+        }
+    })
+    let unnumber = num.addEventListener('blur', () => {
+        if (num.value == "") {
+            b(num, "建议使用常用的手机号");
+        }
+    })
+    let passer = pass.addEventListener('focus', () => {
+        if (pass.style.color != 'black') {
+            a(pass);
+            pass.type = "password";
+        }
+    })
+    let unpasser = pass.addEventListener('blur', () => {
+        if (pass.value == "") {
+            b(pass, "请输入密码");
+            pass.type = "text";
+        }
+        if (Level(pass.value) < 2) {
+            alert("密码安全性不够");
+        }
+    })
+    let submit = sub.addEventListener('click', () => {
+        let name = use.value;
+        let a = num.value;
+        let b = pass.value;
+        let question = que.value;
+        let answer = ans.value;
+        console.log(name, a, b, question, answer);
+        fetch("http://43.139.37.159:8080/user/signup", {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify({
+                Name: name, Phone: a, Password: b,
+                Question: question, Answer: answer
+            })
+
+        }).then(res => {
+            return res.json();
+        }).then(json => {
+            if(json.result){
+                window.location.href="load.html";
+            }
+            else{
+                alert('此用户名已注册，请勿重复注册!');
+            }
+        })
+    })
+</script>
+
+</html>
