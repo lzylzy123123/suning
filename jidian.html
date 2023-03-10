@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.suning.com/favicon.ico" />
+    <title>苏宁易购(Suning.com)-家电家装成套购，专注服务省心购！</title>
+</head>
+<style>
+    #tool {
+        position: relative;
+        background-color: rgb(245, 245, 245);
+        height: 35px;
+        margin-top: -16px;
+        text-align: center;
+    }
+
+    #tool li {
+        display: inline-block;
+        list-style: none;
+        line-height: 35px;
+        padding: 0 9px;
+        font-size: 12px;
+        font-family: 微软雅黑;
+    }
+
+    .logo {
+        position: relative;
+        left: 140px;
+        top: 30px;
+    }
+
+    .find {
+        position: relative;
+        left: 400px;
+        top: -24px;
+    }
+
+    #find {
+        outline: none;
+        border: 2px solid #f80;
+        width: 450px;
+        height: 35px;
+        font-size: 100%;
+        font-family: 微软雅黑;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        ;
+    }
+
+    #button {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        height: 41px;
+        width: 100px;
+        border: 2px solid #f80;
+        background-color: #f80;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+    }
+
+    #home {
+        cursor: pointer;
+        color: black;
+    }
+
+    #home:hover {
+        color: #f60;
+    }
+
+    #class {
+        position: relative;
+        width: 200px;
+        height: 310px;
+        background: #fff;
+        /* z-index: 2; */
+        left: 139px;
+        top: -70px;
+    }
+
+    #top {
+        background-color: #ff8000;
+        position: relative;
+        top: 6px;
+        height: 40px;
+        border-top-right-radius: 12px;
+        border-top-left-radius: 12px;
+        cursor: pointer;
+    }
+
+    #two {
+        padding-left: 35px;
+        line-height: 38px;
+        font-size: 13px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    #one {
+        /* z-index: 3; */
+        background-color: #fff;
+        position: absolute;
+        display: block;
+        width: 25px;
+        height: 25px;
+        top: 12px;
+        left: 12px;
+        background-repeat: no-repeat;
+        background: url(https://res.suning.cn/project/cmsWeb/suning/homepage/v8/css/images/index.png?v=2021062901) -928px 0;
+    }
+
+    #zhiyin {
+        text-decoration: none;
+        color: black;
+    }
+
+    #zhiyin:hover {
+        color: #f60;
+    }
+
+    #list {
+        height: 300px;
+        max-height: 0px;
+        transition: 0.5s;
+        overflow: hidden;
+        position: relative;
+        top: 6px;
+        z-index: 3;
+        background-color: white;
+    }
+
+    #huo {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    #side {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        width: 35px;
+        height: 100%;
+        background-color: #383838;
+    }
+
+    #h {
+        width: 800px;
+        height: 30px;
+        font-size: 15px;
+        position: relative;
+        left: 310px;
+        top: -363px;
+    }
+
+    #h div {
+        float: left;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+
+    #h div a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+
+    #fr {
+        width: 115px;
+        position: relative;
+        left: 20px;
+        bottom: 9px;
+    }
+
+    #h div a:hover {
+        color: #f60;
+    }
+
+    #shai {
+        width: 1190px;
+        height: 37px;
+        background-color: #f8f8fa;
+        position: relative;
+        left: 139px;
+        top: -330px;
+        z-index: 2;
+        font-size: 13px;
+    }
+
+    #shai span {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 8px;
+        text-align: center;
+        color: black;
+        cursor: pointer;
+    }
+
+    #shai div {
+        position: absolute;
+        top: 10px;
+    }
+
+    #shai a {
+        text-decoration: none;
+    }
+
+    #shai span:hover {
+        color: #f60;
+    }
+
+    #good li {
+        float: left;
+        list-style: none;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    #good li a>div {
+        width: 240px;
+        height: 420px;
+        overflow: hidden;
+    }
+
+    #good li a>div:hover {
+        box-shadow: 0px 0px 10px rgb(191, 187, 187);
+    }
+
+    #good ul {
+        position: relative;
+        left: 40px;
+        top: 50px;
+    }
+
+    #good li div>div {
+        margin: 10px;
+        margin-top: 35px;
+        height: 375px;
+        width: 220px;
+        background-color: white;
+        position: relative;
+    }
+
+    #good li div div p:hover {
+        color: #ff7822;
+    }
+
+    #good li div div div {
+        width: 220px;
+        height: 200px;
+        position: absolute;
+        left: -10px;
+        top: -35px;
+    }
+
+    #good li div div p {
+        position: absolute;
+        top: 220px;
+        left: -18px;
+        font-size: 12px;
+        height: 40px;
+        width: 220px;
+        overflow: hidden;
+        padding-left: 19px;
+        color: black;
+        line-height: 20px;
+    }
+
+    #good li div div span {
+        position: absolute;
+        top: 200px;
+        line-height: 28px;
+        color: #ff6600;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #side div div div {
+        width: 35px;
+        height: 28px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+    #num {
+        display: inline-block;
+        min-width: 17px;
+        height: 15px;
+        padding: 0 2px;
+        background-color: #d00;
+        color: #fff;
+        line-height: 15px;
+        border-radius: 5px;
+        text-align: center;
+        position: relative;
+        right: -8px;
+        top: 24px;
+        font-size: 12px;
+    }
+
+    #car:hover {
+        background-color: #ffaa01;
+    }
+</style>
+
+<body style="margin: 0; padding: 0; min-width: 1423px;min-height: 600px; max-width: 1423px; max-height: 600px;">
+    <img src="https://image.suning.cn/uimg/cms/img/167231279999243162.png" alt="活动" id="huo">
+    <div id="side">
+        <div style="position: absolute; top: 132px;">
+            <div>
+                <a href="me.html">
+                    <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901);"
+                        id="me">
+                    </div>
+                </a>
+                <div style="height: 120px;" id="car">
+                    <div
+                        style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901) 3px -210px;">
+                    </div>
+                    <div
+                        style="color: white; font-size: 12px; font-family: 微软雅黑; width: 23px; line-height: 20px; padding-left: 12px; padding-top: -10px;">
+                        购物车
+                    </div>
+                    <span id="num">
+                        0
+                    </span>
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901) 0 -23px;"
+                    id="message">
+                </div>
+            </div>
+            <div>
+                <div></div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -47px;"
+                    id="money">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -70px;"
+                    id="time">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -93px;"
+                    id="tab">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -290px;"
+                    id="ma">
+                </div>
+            </div>
+            <div>
+                <div style="height: 95px;"></div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -118px;"
+                    id="music">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -140px;"
+                    id="suggest">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -165px;"
+                    id="ma2">
+                </div>
+                <a href="javascript:scrollTo(0,0)">
+                    <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -259px;"
+                        id="backtop">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="tool" style="border-bottom: 1px solid #eee;">
+        <ul style="text-align: center;">
+            <div style="position: absolute; left: 120px;">
+                <a href="suning.html" style="text-decoration: none;">
+                    <li id="home">返回首页</li>
+                </a>
+                <li>网站导航</li>
+                <li>商家入驻</li>
+                <li>客户服务</li>
+                <li>网页无障碍</li>
+                <li>position</li>
+            </div>
+            <div style="position: absolute; left: 720px;">
+                <li><a href="load.html" style="color: black; text-decoration: none;" id="load"
+                        onmouseout="this.style.color='black'" onmouseover="this.style.color='rgb(254, 115, 47)'">请登录</a>
+                </li>
+                <li><a href="zhuce.html" target="_blank" style="color: #f60; text-decoration: none; ">注册有礼</a></li>
+                <li>我的订单</li>
+                <li>我的易购</li>
+                <li>苏宁会员</li>
+                <li>购物车</li>
+                <li>易付宝</li>
+                <li>企业采购</li>
+                <li>手机苏宁</li>
+            </div>
+        </ul>
+    </div>
+    <div class="logo">
+        <a href="suning.html"><img src="https://res.suning.cn/project/passport/login/b2c_V7/image/header190-60.png"></a>
+    </div>
+    <div class="find">
+        <input type="text" id="find" value="爆款每1000减100" style="color: #BBB; font-size: 12px; padding-left: 20px;">
+        <div style=" float: left; left: 558px; position: relative; ">
+            <input type="button" value="搜索" id="button"></input>
+        </div>
+    </div>
+    <div style="position: relative; left: 1120px; top: -90px;">
+        <a href="#" title="客户端扫码">
+            <img src="https://image5.suning.cn/uimg/asbs/ad/1471598193968_pc_search.jpg" alt="客户端扫码">
+        </a>
+    </div>
+    <div id="class">
+        <div id="top">
+            <a href="#" style="text-decoration: none;">
+                <div id="one">
+                </div>
+                <div id="two">
+                    分类
+                </div>
+            </a>
+        </div>
+        <div id="list">
+            <div style="padding-left: 90px; padding-top: 30px; position: relative;">
+                <div
+                    style="background: url(https://image2.suning.cn/uimg/cms/img/165820997761848075.png); width: 30px; height: 32px; position: absolute; left: 23px; top: 20px;">
+                </div>
+                <a href="jidian.html" id="zhiyin">机电</a>
+            </div>
+            <div style="padding-left: 90px; padding-top: 30px; position: relative;">
+                <div
+                    style="background: url(https://image5.suning.cn/uimg/cms/img/165820990612972788.png); width: 32px; height: 32px; position: absolute; left: 23px; top: 23px;">
+                </div>
+                <a href="chuwei.html" target="_blank" id="zhiyin">厨卫</a>
+            </div>
+            <div style="padding-left: 90px; padding-top: 30px; position: relative;">
+                <div
+                    style="background: url(https://image1.suning.cn/uimg/cms/img/165820976703113805.png); width: 32px; height: 32px; position: absolute; left: 23px; top: 25px;">
+                </div>
+                <a href="food.html" target="_blank" id="zhiyin">食品</a>
+            </div>
+            <div style="padding-left: 90px; padding-top: 30px; position: relative;">
+                <div
+                    style="background: url(https://image2.suning.cn/uimg/cms/img/165820958652197019.png); width: 32px; height: 32px; position: absolute; left: 23px; top: 25px;">
+                </div>
+                <a href="cloth.html" target="_blank" id="zhiyin">衣服</a>
+            </div>
+            <div style="padding-left: 90px; padding-top: 30px; position: relative;">
+                <div
+                    style="background: url(https://image2.suning.cn/uimg/cms/img/167126080896488799.png); width: 32px; height: 32px; position: absolute; left: 23px; top: 25px;">
+                </div>
+                <a href="serve.html" target="_blank" id="zhiyin">服务</a>
+            </div>
+        </div>
+    </div>
+    <div id="h">
+        <div id="fr"><a href=""><img src="https://image2.suning.cn/uimg/cms/img/161185054090483911.png" alt=""
+                    style="height: 100%; width: 100%;"> </a> </div>
+        <div><a href="#">苏宁家电</a> </div>
+        <div><a href="#">手机数码</a> </div>
+        <div><a href="#">苏宁超市</a> </div>
+        <div><a href="#">家具建材</a> </div>
+        <div><a href="#">生活家电</a> </div>
+        <div><a href="#">帮客服务</a> </div>
+        <div><a href="#">药品信息</a> </div>
+    </div>
+    <div id="shai">
+        <div style="width: 350px;" id="div">
+            <a><span style="color: #f60;" id="a">综合</span></a>
+            <a><span id="b">销量</span></a>
+            <a><span id="c">评价数</span></a>
+            <a><span id="d">价格</span></a>
+        </div>
+        <div style="height: 3px; width: 77px; background-color: #f60; position: relative; top: 34px; transition:left 0.3s;"
+            id="k"></div>
+    </div>
+    <div style="position: relative; height: 3200px; top: -400px; left: 56px;" id="good">
+        <ul>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="good.html" style="text-decoration: none; color: black;">
+                    <div>
+                        <div title="海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1">
+                            <div><img
+                                    src="https://oss.suning.com/adpp/creative_kit/material/picture/20221212-0505a27dbc66432dad2df433970d11f59c0c3a8064c74f0c.jpg?format=200w_200h_2e"
+                                    width="100%" height="100%"></div>
+                            <span style="font-size: 14px; top: 201px;">￥</span><span style="left: 15px;"
+                                class="pr">4499</span><span style="font-size: 6px; left: 65px; top: 203px;">.00</span>
+                            <p>海尔 haier 535L十字对开四门大容量电冰箱 1级变频 风冷无霜智能嵌入家用BCD-535WGHTDD9G9U1</p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<style>
+
+</style>
+<script>
+    const call = document.getElementById('top');
+    const find = document.getElementById('find');
+    const list = document.getElementById('list');
+    const cl = document.getElementById('class');
+    const a = document.getElementById('a');
+    const b = document.getElementById('b');
+    const c = document.getElementById('c');
+    const d = document.getElementById('d');
+    const k = document.getElementById('k');
+    const div = document.getElementById('div');
+    find.addEventListener('focus', () => {
+        find.style.color = 'black';
+        find.value = '';
+    })
+    find.addEventListener('blur', () => {
+        if (find.value == '') {
+            find.style.color = '#BBB';
+            find.value = '爆款每1000减100';
+        }
+    })
+    call.addEventListener('mouseover', () => {
+        list.style.maxHeight = '300px';
+        // removeEventListener(ca);
+    })
+    cl.addEventListener('mouseleave', () => {
+        list.style.maxHeight = '0px';
+    })
+    let kkk = 0;
+    a.addEventListener('mouseover', () => {
+        k.style.left = 0;
+        a.addEventListener('click', () => {
+            kkk = 0;
+            a.style.color = '#f60';
+            b.style.color = 'black';
+            c.style.color = 'black';
+            d.style.color = 'black';
+        })
+    })
+    b.addEventListener('mouseover', () => {
+        k.style.left = '80px';
+        b.addEventListener('click', () => {
+            kkk = '80px';
+            a.style.color = 'black';
+            b.style.color = '#f60';
+            c.style.color = 'black';
+            d.style.color = 'black';
+        })
+    })
+    c.addEventListener('mouseover', () => {
+        k.style.left = '167px';
+        c.addEventListener('click', () => {
+            kkk = '167px';
+            a.style.color = 'black';
+            b.style.color = 'black';
+            c.style.color = '#f60';
+            d.style.color = 'black';
+        })
+    })
+    d.addEventListener('mouseover', () => {
+        k.style.left = '254px';
+        d.addEventListener('click', () => {
+            kkk = '254px';
+            a.style.color = 'black';
+            b.style.color = 'black';
+            c.style.color = 'black';
+            d.style.color = '#f60';
+        })
+    })
+    div.addEventListener('mouseleave', () => {
+        k.style.left = kkk;
+    })
+    let me = document.getElementById('me')
+    let message = document.getElementById('message')
+    let money = document.getElementById('money')
+    let time = document.getElementById('time')
+    let tab = document.getElementById('tab')
+    let ma = document.getElementById('ma')
+    let music = document.getElementById('music')
+    let suggest = document.getElementById('suggest')
+    let ma2 = document.getElementById('ma2')
+    let backtop = document.getElementById('backtop')
+    let imgs = document.querySelectorAll('#good img');
+    let pr = document.querySelectorAll('#good img');
+    let k_k = function (a, b) {
+        a.addEventListener('mouseover', () => {
+            a.style.background = `url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901) -26px ${b}`;
+            a.style.backgroundColor = '#ffaa01'
+        })
+        a.addEventListener('mouseleave', () => {
+            a.style.background = `url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901) 0 ${b}`;
+            a.style.backgroundColor = ''
+        })
+    }
+    k_k(me, 0);
+    k_k(message, '-23px');
+    k_k(money, '-47px');
+    k_k(time, '-70px');
+    k_k(tab, '-93px');
+    k_k(ma, '-290px');
+    k_k(music, '-118px');
+    k_k(suggest, '-140px');
+    k_k(ma2, '-165px');
+    k_k(backtop, '-259px');
+    function getcookie(key) {
+        var str = document.cookie;
+        var startIndex = str.indexOf(key);
+        var value = "";
+        if (startIndex == -1) {//找不到
+            return value;
+        }
+        var endIndex = str.indexOf(";", startIndex);
+        if (endIndex == -1) {//找不到
+            value = str.substring(startIndex + key.length + 1)
+        } else {
+            value = str.substring(startIndex + key.length + 1, endIndex)
+        }
+        return value;
+    }
+    // 版权声明：本文为CSDN博主「nianyuw」的原创文章，遵循CC 4.0 BY - SA版权协议，转载请附上原文出处链接及本声明。
+    // 原文链接：https://blog.csdn.net/m0_61820867/article/details/124120617
+    // let name = decodeURIComponent(decodeURIComponent(getcookie("name")));
+    function arr_img(e) {
+        let ar = new Array;
+        let b = 0;
+        for (let i = 0; i < e.length; i++) {
+            if (e[i] == '"') {
+                let j = i;
+                i += 1;
+                while (e[i] != '"') {
+                    // ar[b++] = e.slice(j,i-1)
+                    i++;
+                }
+                ar[b++] = e.slice(j + 1, i);
+            }
+        }
+        let Ar = new Array;
+        let c = 0;
+        for (let i = 6; i < ar.length; i += 9) {
+            Ar[c++] = ar[i];
+        }
+        return Ar;
+    }
+    function arr_price(e) {
+        let ar = new Array;
+        let b = 0;
+        for (let i = 0; i < e.length; i++) {
+            if (e[i] == '"') {
+                let j = i;
+                i += 1;
+                while (e[i] != '"') {
+                    // ar[b++] = e.slice(j,i-1)
+                    i++;
+                }
+                ar[b++] = e.slice(j + 1, i);
+            }
+        }
+        let Ar = new Array;
+        let c = 0;
+        for (let i = 8; i < ar.length; i += 9) {
+            Ar[c++] = ar[i];
+        }
+       
+        return Ar;
+    }
+    // const button = document.querySelector('input');
+    fetch('http://43.139.37.159:8080/search/tag', {
+        method: 'post',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        },
+        body: JSON.stringify({ Kind: '机电' })
+    }).then(res => {
+        return res.text();
+        // return res;
+    }).then(js => {
+        let igs = arr_img(js);
+            let prs = arr_price(js);
+            let k = 0;
+            for (let i = 0; i < igs.length; i++) {
+                imgs[i].src = igs[k++];
+                pri[i].innerHTML = prs[k];
+            }
+    })
+    let price = document.getElementById('d');
+    let pri = document.getElementsByClassName('pr');
+    price.addEventListener('click', () => {
+        fetch('http://43.139.37.159:8080/search/price', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify({ Kind: '机电' })
+        }).then(res => {
+            return res.text();
+            // return res;
+        }).then(js => {
+            let igs = arr_img(js);
+            let prs = arr_price(js);
+            let k = 0;
+            for (let i = 0; i < igs.length; i++) {
+                imgs[i].src = igs[k++];
+                pri[i].innerHTML = prs[k];
+            }
+        })
+    })
+    let normal = document.getElementById('a');
+    normal.addEventListener('click', () => {
+        fetch('http://43.139.37.159:8080/search/tag', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify({ Kind: '机电' })
+        }).then(res => {
+            return res.text();
+            // return res;
+        }).then(js => {
+            let igs = arr_img(js);
+            let prs = arr_price(js);
+            let k = 0;
+            for (let i = 0; i < igs.length; i++) {
+                imgs[i].src = igs[k++];
+                pri[i].innerHTML = prs[k];
+            }
+        })
+    })
+</script>
+
+</html>

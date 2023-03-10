@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.suning.com/favicon.ico" />
+    <title>苏宁易购(Suning.com)-家电家装成套购，专注服务省心购！</title>
+</head>
+<style>
+    #tool {
+        position: relative;
+        background-color: rgb(245, 245, 245);
+        height: 35px;
+        margin-top: -16px;
+        text-align: center;
+    }
+
+    #tool li {
+        display: inline-block;
+        list-style: none;
+        line-height: 35px;
+        padding: 0 9px;
+        font-size: 12px;
+        font-family: 微软雅黑;
+    }
+
+    #home {
+        cursor: pointer;
+        color: black;
+    }
+
+    #home:hover {
+        color: #f60;
+    }
+
+    #top div div {
+        color: white;
+        width: 100px;
+        float: left;
+        font-size: 14px;
+        text-align: center;
+        height: 40px;
+    }
+
+    #top div {
+        position: relative;
+        left: 180px;
+        top: 10px;
+        width: 600px;
+    }
+
+    #main {
+        width: 422px;
+        height: 151px;
+        background-color: white;
+        position: relative;
+        left: 261px;
+        top: 15px;
+    }
+
+    #main2 {
+        width: 382px;
+        height: 151px;
+        background-color: white;
+        position: relative;
+        left: 693px;
+        top: -136px;
+    }
+
+    #main3 {
+        width: 199px;
+        height: 151px;
+        background-color: white;
+        position: relative;
+        left: 1085px;
+        top: -287px;
+    }
+
+    #main4 {
+        width: 1024px;
+        height: 500px;
+        background-color: white;
+        position: relative;
+        top: -276px;
+        left: 261px;
+    }
+
+    #main5 {
+        width: 1024px;
+        /* height: 682px; */
+        background-color: white;
+        position: relative;
+        top: -630px;
+        left: 261px;
+        /* display: flex;
+        justify-content: center; */
+
+
+    }
+
+    .one {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 10px solid transparent;
+        border-bottom: 10px solid white;
+        position: relative;
+        top: -1625px;
+        left: 400px;
+    }
+
+    #three {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 5px solid transparent;
+        border-bottom: 5px solid #bbbbbb;
+        position: absolute;
+        top: 2px;
+    }
+
+    #down {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 5px solid transparent;
+        border-top: 5px solid #ffc898;
+        position: relative;
+        top: -1996px;
+        left: 541px;
+    }
+
+    #tap {
+        position: absolute;
+        /* padding: 20px 0 20px 20px; */
+        left: 390px;
+        top: 86px;
+        width: 222px;
+        /* margin-right: -40px; */
+        background: #FFF;
+        box-shadow: 1px 0 5px #ddd, -1px 0 5px #ddd;
+        /* z-index: 10; */
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #tap ul {
+        list-style-type: none;
+    }
+
+    #tap ul li {
+        margin: 15px 0;
+    }
+
+    #tap a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    #tap a:hover {
+        color: #F70;
+    }
+
+    #left {
+        width: 160px;
+        /* height: 298px; */
+        position: relative;
+        left: 90px;
+        top: -1660px;
+        box-shadow: 0 2px 2px #e3e3e3, -1px 2px 2px #e3e3e3;
+    }
+
+    #left ul {
+        position: absolute;
+        top: 7px;
+    }
+
+    #left li {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    #left ul li::marker {
+        color: #f70;
+    }
+
+    #left a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #left a:hover {
+        color: #F70;
+    }
+
+    #bank {
+        background-color: #ffffff;
+        overflow: hidden;
+        max-height: 300px;
+        transition: 0.5s;
+    }
+
+    #ad:hover {
+        color: #f60;
+    }
+
+    #zuan {
+        width: 100px;
+        height: 25px;
+        color: #fff;
+        background: #fc6703;
+        font-size: 14px;
+        position: absolute;
+        left: 140px;
+        top: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #money:hover {
+        color: #f60;
+    }
+
+    #money2:hover {
+        color: #f60;
+    }
+
+    .lis:hover {
+        color: #f60;
+    }
+
+    #u li {
+        float: left;
+        padding-left: 60px;
+        font-size: 12px;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #po {
+        height: 20px;
+        width: 60px;
+        background-color: #ff9900;
+        color: white;
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 48px;
+        left: 310px;
+        border: 1px solid #ff9900;
+        cursor: pointer;
+    }
+
+    #po:hover {
+        background-color: #ffb500;
+        border: 1px solid #ffb500;
+    }
+
+    #tan {
+        width: 438px;
+        position: fixed;
+        left: 492.5px;
+        top: 251px;
+        height: 278.59px;
+        background-color: white;
+        border: 5px solid #dcdcdc;
+        display: none;
+    }
+
+    #tan h3 {
+        margin: 0;
+        margin-left: 25px;
+        color: #333;
+        font: bold 14px/40px 'microsoft yahei';
+        height: 36px;
+        width: 388px;
+        border-bottom: 1px solid #ddd;
+    }
+</style>
+
+<body style="margin: 0; padding: 0; min-width: 1440px;min-height: 600px; max-width: 1440px; max-height: 600px;">
+    <div id="tool" style="border-bottom: 1px solid #eee;">
+        <ul style="text-align: center; position: relative;">
+            <div style="position: absolute; left: 120px;">
+                <a href="suning.html" style="text-decoration: none;">
+                    <li id="home">返回首页</li>
+                </a>
+                <li>网站导航</li>
+                <li>商家入驻</li>
+                <li>客户服务</li>
+                <li>网页无障碍</li>
+                <li>position</li>
+            </div>
+            <div style="position: absolute; left: 720px;">
+                <li><a href="load.html" style="color: black; text-decoration: none;" id="load"
+                        onmouseout="this.style.color='black'" onmouseover="this.style.color='rgb(254, 115, 47)'">请登录</a>
+                </li>
+                <li><a href="zhuce.html" target="_blank" style="color: #f60; text-decoration: none; ">注册有礼</a></li>
+                <li>我的订单</li>
+                <li>我的易购</li>
+                <li>苏宁会员</li>
+                <li>购物车</li>
+                <li>易付宝</li>
+                <li>企业采购</li>
+                <li>手机苏宁</li>
+            </div>
+        </ul>
+    </div>
+    <div style="height: 60px; background-color: #ff7700; position: relative;" id="top">
+        <img src='https://res.suning.cn/project/msIndex/css/images/ms-logo.png'
+            style="position: absolute; left: 85px; top: 15px;">
+        <div>
+            <a href="back.html">
+                <div id="back">首页</div>
+            </a>
+            <a style="cursor: pointer;">
+                <div id="person">账户信息</div>
+            </a>
+            <a href="message.html">
+                <div id="message">消息</div>
+            </a>
+        </div>
+    </div>
+    <div style="height: 5px;"></div>
+    <div style="height: 1600px; background-color: #f5f5f5;">
+        <div id="main">
+            <a href="me.html">
+                <div style="height: 90px; width: 90px; border-radius: 55px; border: 3px solid #e3e3e3; margin-top: 30px; 
+                    overflow: hidden; text-align: center; position: absolute; left: 70px;">
+                    <img src="https://image.suning.cn/uimg/cmf/cust_headpic/0000000000_01_120x120.jpg"
+                        style="width: 100%; height: 100%;">
+                </div>
+            </a>
+            <div style="height: 20px; width: 120px; font-size: 14px;
+                font-weight: 700; color: #333; position: absolute; left: 200px; top: 50px;">153******18</div>
+            <a href="address.html" style="text-decoration: none; color: #333;">
+                <div style="height: 20px; width: 120px; font-size: 14px; position: absolute; left: 200px; top: 85px;"
+                    id="ad">
+                    我的收货地址></div>
+            </a>
+            <div id="po">退出登录</div>
+        </div>
+        <div id="main2">
+            <img src="https://res.suning.cn/project/msIndex/index/newMember/image/yun.png"
+                style="position: absolute; left: 140px; top: 20px;">
+            <div id="zuan">打卡领云钻</div>
+            <div style="height: 40px; width: 382px; border-top: 1px solid #efefef; position: absolute; bottom:0px;">
+                <a href="money.html" style="text-decoration: none; color: #333;">
+                    <div style="height: 40px; width: 191px; border-right: 1px solid #efefef; display: flex;
+                    justify-content: center;align-items: center;" id="money">
+                        我的资产</div>
+                </a>
+                <a href="" style="text-decoration: none; color: #333;">
+                    <div style="height: 40px; width: 191px; display: flex; justify-content: center; align-items: center; 
+                    position: absolute; right: 0px; top: 0px;" id="money2">
+                        我的任性付</div>
+                </a>
+            </div>
+        </div>
+        <div id="main3">
+            <img src="https://image.suning.cn/uimg/cms/img/151774406177253561.png" alt="">
+            <img src="https://res.suning.cn/project/msIndex/index/newMember/image/super.png" alt=""
+                style="position: absolute; bottom: 1px;">
+        </div>
+        <div id="main4">
+            <div style="height: 40px; font-size: 16px;font-weight: 700;color: #666; border-bottom: 1px solid #efefef;">
+                <span style="position: absolute; left: 20px; top: 10px;">我的订单</span>
+            </div>
+            <div style="border-bottom:1px solid #e5e5e5; height: 40px; position: relative;">
+                <div style="height: 42px; position: absolute; width: 155px; display: flex; justify-content: center; 
+                align-items: center; border-right:1px solid #e5e5e5; font-size: 14px; font-weight: 700; color: #333; cursor: pointer;"
+                    class="list">
+                    <div class="lis">待付款</div>
+                </div>
+                <div style="height: 42px; position: absolute; width: 155px; left: 155px; display: flex; 
+                justify-content: center; align-items: center; border-right:1px solid #e5e5e5; font-size: 14px; font-weight: 700; color: #333; cursor: pointer;"
+                    class="list">
+                    <div class="lis">待收货</div>
+                </div>
+                <div style="height: 42px; position: absolute; width: 155px; left: 310px; display: flex; 
+                justify-content: center; align-items: center; border-right:1px solid #e5e5e5; font-size: 14px; font-weight: 700; color: #333; cursor: pointer;"
+                    class="list">
+                    <div class="lis">待评价</div>
+                </div>
+                <div style="height: 42px; position: absolute; width: 155px; left: 465px; display: flex; 
+                justify-content: center; align-items: center; border-right:1px solid #e5e5e5; font-size: 14px; font-weight: 700; color: #333; cursor: pointer;"
+                    class="list">
+                    <div class="lis">已完成</div>
+                </div>
+            </div>
+        </div>
+        <div
+            style="width: 1000px;height: 30px;background-color: #f5f5f5; position: absolute; top: 370px;left: 273px; display: flex; justify-content: center; align-items: center;">
+            <ul style="list-style-type: none; padding: 0; margin: 0; position: relative; left: -35px;" id="u">
+                <li>近三个月订单</li>
+                <li>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</li>
+                <li>单价</li>
+                <li>数量</li>
+                <li>商品操作</li>
+                <li>收货人</li>
+                <li>支付总金额</li>
+                <li>全部</li>
+                <li>&nbsp</li>
+                <li>操作</li>
+            </ul>
+        </div>
+        <div id="main5">
+
+        </div>
+    </div>
+    <div class="one" id="k"></div>
+    <div class="one" style="top: -1645px; left: 500px; border-bottom: 10px solid transparent;" id="kk"></div>
+    <div class="one" style="top: -1665px; left: 600px; border-bottom: 10px solid transparent;" id="kkk"></div>
+    <div id="left">
+        <div style="height: 278px; position: relative;" id="bank">
+            <ul>
+                <li style="line-height: 28px; font-size: 14px; font-family: Microsoft YaHei; font-weight: 700; 
+                    color: #333; position: relative; left: -13px; list-style-type: none;">
+                    账户管理</li>
+                <li><a href="me.html">个人信息</a></li>
+                <li><a href="address.html">地址管理</a></li>
+                <li><a href="">安全设置</a></li>
+                <li><a href="">我的易付宝</a></li>
+                <li><a href="">股东会员认证</a></li>
+                <li><a href="">绑定管理</a></li>
+                <li><a href="">个人增票</a></li>
+                <li><a href="">易付宝绑定管理</a></li>
+                <li><a href="">苏宁国际实名认证</a></li>
+            </ul>
+        </div>
+        <div style="height: 20px; background-color: #f5f5f5; display: flex; justify-content: center; 
+        align-items: center; cursor: pointer; position: relative;" id="thr">
+            <div id="three"></div>
+        </div>
+    </div>
+    <div id="down"></div>
+    <div id="tap">
+        <ul style="float: left;">
+            <li style="color: #666; font-size: 14px; font-family: Microsoft yahei; font-weight: bold;">安全设置</li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="change1.html">修改密码</a></li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="que1.html">安保问题管理</a></li>
+        </ul>
+        <ul style="float: left;">
+            <li style="color: #666; font-size: 14px; font-family: Microsoft yahei; font-weight: bold;">个人资料</li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="me.html">个人信息 </a></li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="address.html">地址管理</a></li>
+        </ul>
+    </div>
+    <div id="tan">
+        <h3>马上支付
+            <img src="https://res.suning.cn/project/cmsWeb/suning/wxmini/images/suning/fourth/cover-close.png" alt=""
+                style="height: 16px; width: 16px; position: relative; left: 313px; top: 2px; cursor: pointer;" id="x">
+        </h3>
+        <div style="font-size: 14px; padding-top: 20px;height: 45px; text-align: center;">请您选择需要的支付方式</div>
+        <div style="height: 36px; width: 279px; border: 1px solid #ccc; position: relative; left: 78px; 
+            margin-bottom: 15px; display: flex;align-items: center; font-size: 12px; cursor: pointer;" id="suningpay">
+            <span style="padding-left: 10px;"></span>
+            <div
+                style="height: 28px; width: 28px; background: url(https://res.suning.cn/project/ofs/css/images/ic-order.png?v=6133906661a1453dfb75d0efbdee64af) 0 -156px;">
+            </div>
+            <span style="padding-left: 15px;"></span>
+            苏宁支付
+        </div>
+        <div style="height: 36px; width: 279px; border: 1px solid #ccc; position: relative; left: 78px; 
+            display: flex;align-items: center; font-size: 12px; cursor: pointer;" id="alipay">
+            <span style="padding-left: 10px;"></span>
+            <div
+                style="height: 28px; width: 28px; background: url(https://res.suning.cn/project/ofs/css/images/ic-order.png?v=6133906661a1453dfb75d0efbdee64af) -30px -156px;">
+            </div>
+            <span style="padding-left: 15px;"></span>
+            支付宝支付
+        </div>
+        <div style="position: relative;">
+            <div style="height: 24px; width: 28px; padding: 0 17px; background-color: #f60; border: 1px solid #f90; font: 14px/26px 'microsoft yahei'; 
+                border-radius: 2px; color: white; display: flex;align-items: center; position: absolute; left: 140px; top: 15px; cursor: pointer;"
+                id="true">
+                确定
+            </div>
+            <div style="height: 24px; width: 28px; padding: 0 17px; background-color: white; border: 1px solid #ddd; font: 14px/26px 'microsoft yahei'; 
+                border-radius: 2px; display: flex;align-items: center; position: absolute; left: 215px; top: 15px; cursor: pointer;"
+                id="close">
+                关闭
+            </div>
+        </div>
+    </div>
+    <template id="paper">
+        <style>
+            #pap {
+                width: 1000px;
+                height: 200px;
+                border: 1px solid #f5f5f5;
+                /* background-color: #333; */
+                margin-bottom: 15px;
+                margin-left: 11px;
+            }
+
+            #top {
+                position: relative;
+                height: 40px;
+                background-color: #f5f5f5;
+                width: 1000px;
+                font-size: 14px;
+                color: #333;
+                font-family: 微软雅黑;
+            }
+
+            #top2 {
+                position: absolute;
+                left: 80px;
+                top: 10px;
+            }
+
+            #a-a {
+                font-size: 14px;
+                color: #333;
+                font-family: 微软雅黑;
+            }
+
+            #a-a:hover {
+                color: #F70;
+            }
+
+            #good {
+                width: 525px;
+                height: 160px;
+                position: relative;
+                border-right: 1px solid #e5e5e5;
+                font-size: 12px;
+            }
+
+            #delete:hover {
+                color: #F70;
+            }
+        </style>
+        <div id="pap">
+            <div id="top">
+                <div style="width: 40px; position: absolute; left: 40px; top: 10px; color: #bbbbbb;">卖家:</div>
+                <a href="shop.html" id="a-a">
+                    <div id="top2"></div>
+                </a>
+            </div>
+            <div id="good">
+                <div style="width: 110px; height: 110px; position: absolute; left: 10px; top: 25px;">
+                    <img src="" alt="" style="height: 100%; width: 100%;">
+                </div>
+                <div
+                    style="font-size: 12px; font-family: Simsun; width: 130px; position: absolute;left: 130px; top: 40px;">
+                    Haier/海尔 485升十字对开门多门四门风冷无霜双变频变温净味超薄嵌入式四门冰箱BCD-485WGHTDD9DYU1
+                </div>
+                <div style="position: absolute; left: 275px; top: 60px;">￥3999.00</div>
+                <div style="position: absolute; left: 382px; top: 60px;">1</div>
+                <div
+                    style="height: 160px; width: 107px; border-right: 1px solid #e5e5e5;position: absolute; left: 530px; display: flex;justify-content: center;align-items: center;">
+                    历飞羽</div>
+                <div
+                    style="height: 160px; width: 107px; border-right: 1px solid #e5e5e5;position: absolute; left: 637px; display: flex;justify-content: center;align-items: center;">
+                    ￥3999.00</div>
+                <div
+                    style="height: 160px; width: 107px; border-right: 1px solid #e5e5e5;position: absolute; left: 744px; display: flex;justify-content: center;align-items: center;">
+                </div>
+                <div style="height: 24px; width: 70px; background-color: #ff9900; border-radius: 2px; left: 900px; position: absolute; top: 50px; display: flex;justify-content: center;align-items: center; cursor: pointer;"
+                    id="pay">
+                    <a href="#" style="text-decoration: none; color: white;">马上支付</a>
+                </div>
+                <div style=" left: 910px; position: absolute; top: 83px; width: 100px; cursor: pointer;" id="delete">
+                    取消订单</div>
+            </div>
+        </div>
+    </template>
+</body>
+<script src="order.js"></script>
+<script>
+    let person = document.getElementById('person');
+    let tap = document.getElementById('tap');
+    person.addEventListener('mouseover', () => {
+        tap.style.maxHeight = '150px'
+    })
+    person.addEventListener('mouseleave', () => {
+        tap.addEventListener('mouseleave', () => {
+            tap.style.maxHeight = '0px'
+        })
+
+    })
+    let thr = document.getElementById('thr');
+    let bank = document.getElementById('bank');
+    let three = document.getElementById('three');
+    thr.addEventListener('click', () => {
+        if (bank.style.maxHeight == '12px') {
+            bank.style.maxHeight = '300px';
+            three.style.transform = 'rotate(0deg)';
+            three.style.top = '2px';
+        }
+        else {
+            bank.style.maxHeight = '12px';
+            three.style.transform = 'rotate(180deg)';
+            three.style.top = '8px';
+        }
+    })
+    let list = document.getElementsByClassName('list')
+    let lis = document.getElementsByClassName('lis')
+    for (let i = 0; i < lis.length; i++) {
+        lis[i].addEventListener('click', () => {
+            for (let j = 0; j < lis.length; j++) {
+                lis[j].style.color = '#333';
+                list[j].style.borderBottom = 'none';
+            }
+            lis[i].style.color = '#f60';
+            list[i].style.borderBottom = '1px solid white';
+        })
+    }
+    let main5 = document.getElementById('main5');
+    // document.getElementById('main5').removeChild(main5.firstChild.nextSibling);
+    let Src = 'image="https://imgservice.suning.cn/uimg1/b2c/image/pJi7EbWznaNp8qQ3K2PZhA.jpg_400w_400h_4e"'
+    document.getElementById('main5').innerHTML += `<pa-per ${Src}></pa-per>`
+    document.getElementById('main5').innerHTML += `<pa-per ${Src}></pa-per>`
+    document.getElementById('po').addEventListener('click', () => {
+        fetch('', {
+            method: 'post',
+        })
+        window.location.assign('suning.html')
+    })
+    let x = document.getElementById('x');
+    let tan = document.getElementById('tan');
+    let alipay = document.getElementById('alipay');
+    let suningpay = document.getElementById('suningpay');
+    let close = document.getElementById('close');
+    let tru = document.getElementById('true');
+    x.addEventListener('click', () => {
+        tan.style.display = 'none'
+    })
+    alipay.addEventListener('click', () => {
+        suningpay.style.border = '1px solid #ccc'
+        alipay.style.border = '2px solid #f60'
+    })
+    suningpay.addEventListener('click', () => {
+        alipay.style.border = '1px solid #ccc'
+        suningpay.style.border = '2px solid #f60'
+    })
+    close.addEventListener('click', () => {
+        tan.style.display = 'none'
+    })
+    tru.addEventListener('click', () => {
+        console.log(suningpay.style.borderColor);
+        if (alipay.style.borderColor == 'rgb(255, 102, 0)') {
+            window.location.href = 'alipay.html'
+        }
+        if (suningpay.style.borderColor == 'rgb(255, 102, 0)') {
+            window.location.href = 'suningpay.html'
+        }
+    })
+    // console.log(Element.shadowRoot);
+</script>
+
+</html>

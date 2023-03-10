@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.suning.com/favicon.ico" />
+    <title>苏宁易购(Suning.com)-家电家装成套购，专注服务省心购！</title>
+</head>
+<style>
+    #tool {
+        position: relative;
+        background-color: rgb(245, 245, 245);
+        height: 35px;
+        margin-top: -16px;
+        border-bottom: 1px solid #eee;
+        max-width: 1423px;
+        min-width: 1423px;
+    }
+
+    #tool li {
+        display: inline-block;
+        list-style: none;
+        line-height: 35px;
+        padding: 0 9px;
+        font-size: 12px;
+        font-family: 微软雅黑;
+    }
+
+    .logo {
+        position: relative;
+        left: 140px;
+        top: 30px;
+    }
+
+    .find {
+        position: relative;
+        left: 400px;
+        top: -24px;
+    }
+
+    #find {
+        outline: none;
+        border: 2px solid #f80;
+        width: 450px;
+        height: 35px;
+        font-size: 100%;
+        font-family: 微软雅黑;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #button {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        height: 41px;
+        width: 100px;
+        border: 2px solid #f80;
+        background-color: #f80;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+    }
+
+    #huo {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    #side {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 9;
+        width: 35px;
+        height: 100%;
+        background-color: #383838;
+    }
+
+    #side div div div {
+        width: 35px;
+        height: 28px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+    #num {
+        display: inline-block;
+        min-width: 17px;
+        height: 15px;
+        padding: 0 2px;
+        background-color: #d00;
+        color: #fff;
+        line-height: 15px;
+        border-radius: 5px;
+        text-align: center;
+        position: relative;
+        right: -8px;
+        top: 24px;
+        font-size: 12px;
+    }
+
+    #car:hover {
+        background-color: #ffaa01;
+    }
+
+    #home {
+        cursor: pointer;
+        color: black;
+    }
+
+    #home:hover {
+        color: #f60;
+    }
+
+    #title {
+        font: 700 16px/1.5;
+        color: #222;
+        height: 48px;
+        width: 550px;
+        position: relative;
+        left: 570px;
+        top: -340px;
+        font-weight: 700;
+    }
+
+    #three {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 5px solid transparent;
+        border-top: 5px solid #bbbbbb;
+        position: absolute;
+        left: 150px;
+        top: 5px;
+    }
+
+    #to {
+        cursor: pointer;
+    }
+
+    #p div {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #small {
+        width: 200px;
+        height: 200px;
+        z-index: 2;
+        cursor: move;
+        border: 1px solid #aaa;
+        background-color: #fede4f;
+        position: absolute;
+        opacity: 0.6;
+    }
+
+    #grey {
+        width: 988px;
+        height: 47px;
+        background-color: #f7f7f7;
+        position: absolute;
+    }
+
+    #gouwucar {
+        width: 137px;
+        height: 47px;
+        background-color: #ff5500;
+        color: #fff;
+        font: 16px microsoft yahei;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+        position: absolute;
+        right: 0;
+    }
+
+    .tab {
+        height: 46px;
+        width: 106px;
+        /* border-top:2px solid #f60; */
+        float: left;
+        font-size: 14px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+</style>
+
+<body style="margin: 0; padding: 0; min-width: 1423px;min-height: 600px; max-width: 1423px; max-height: 600px;">
+    <img src="https://image.suning.cn/uimg/cms/img/167231279999243162.png" title="活动" id="huo">
+    <div id="side">
+        <div style="position: absolute; top: 132px;">
+            <div>
+                <a href="me.html">
+                    <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901);"
+                        id="me">
+                    </div>
+                </a>
+                <a href="back.html" style="text-decoration: none;">
+                    <div style="height: 120px;" id="car">
+                        <div
+                            style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901) 3px -210px;">
+                        </div>
+                        <div
+                            style="color: white; font-size: 12px; font-family: 微软雅黑; width: 23px; line-height: 20px; padding-left: 12px; padding-top: -10px;">
+                            购物车
+                        </div>
+                        <span id="num">
+                            0
+                        </span>
+                    </div>
+                </a>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901) 0 -23px;"
+                    id="message">
+                </div>
+            </div>
+            <div>
+                <div></div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -47px;"
+                    id="money">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -70px;"
+                    id="time">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -93px;"
+                    id="tab">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -290px;"
+                    id="ma">
+                </div>
+            </div>
+            <div>
+                <div style="height: 95px;"></div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -118px;"
+                    id="music">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -140px;"
+                    id="suggest">
+                </div>
+                <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -165px;"
+                    id="ma2">
+                </div>
+                <a href="javascript:scrollTo(0,0)">
+                    <div style="background: url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901)0 -259px;"
+                        id="backtop">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="tool" style="border-bottom: 1px solid #eee;">
+        <ul style="text-align: center;">
+            <div style="position: absolute; left: 120px;">
+                <a href="suning.html" style="text-decoration: none;">
+                    <li id="home">返回首页</li>
+                </a>
+                <li>网站导航</li>
+                <li>商家入驻</li>
+                <li>客户服务</li>
+                <li>网页无障碍</li>
+                <li>position</li>
+            </div>
+            <div style="position: absolute; left: 720px;">
+                <li><a href="load.html" style="color: black; text-decoration: none;" id="load"
+                        onmouseout="this.style.color='black'" onmouseover="this.style.color='rgb(254, 115, 47)'">请登录</a>
+                </li>
+                <li><a href="zhuce.html" target="_blank" style="color: #f60; text-decoration: none; ">注册有礼</a></li>
+                <li>我的订单</li>
+                <li>我的易购</li>
+                <li>苏宁会员</li>
+                <li>购物车</li>
+                <li>易付宝</li>
+                <li>企业采购</li>
+                <li>手机苏宁</li>
+            </div>
+        </ul>
+    </div>
+
+    <div class="logo">
+        <a href="suning.html"><img src="https://res.suning.cn/project/passport/login/b2c_V7/image/header190-60.png"></a>
+    </div>
+    <div class="find">
+        <input type="text" id="find" value="爆款每1000减100" style="color: #BBB; font-size: 12px; padding-left: 20px;">
+        <div style=" float: left; left: 558px; position: relative; ">
+            <input type="button" value="搜索" id="button"></input>
+        </div>
+    </div>
+    <div style="height: 400px; width: 400px; position: relative; left: 140px; top: 50px;" id="im"><img
+            src="https://imgservice.suning.cn/uimg1/b2c/image/NWARC5cUs-zgaOJD-TSThw.jpg_800w_800h_4e" alt=""
+            style="height: 100%; width: 100%; z-index: 1; position: absolute;">
+    </div>
+    <div id="small"></div>
+    <div id="title">海尔(Haier)冰箱335升冰箱双变频 风冷无霜多门一级能效三档变温母婴空间电冰箱BCD-335WLHFD78DYU1</div>
+    <div style="height: 340px; width: 550px; position: relative; left: 570px; top: -320px;">
+        <div style="font-size: 12px; color: #999999; font-family: Simsun;">送&nbsp&nbsp至</div>
+        <div style="font-size: 12px; color: #999999; font-family: Simsun; position: absolute; top: 50px;">数&nbsp&nbsp量
+        </div>
+        <div style="background: url(https://res.suning.cn/project/pdsWeb/csspc2021/images/f-icons-ex1.png?v=1651907038)-970px -668px; width: 22px; height: 30px; position: absolute; left: 84px; top: 40px; cursor: pointer;"
+            id="jian"></div>
+        <div style="position: absolute; left: 106px; top: 40px;"><input type="text"
+                style="width: 25px; height: 18px; outline: none; padding: 5px; margin: 0 5px; text-align: center; border: 1px solid #ddd; font-size: 12px;"
+                value="1" id="put"></div>
+        <div style="background: url(https://res.suning.cn/project/pdsWeb/csspc2021/images/f-icons-ex1.png?v=1651907038)-992px -668px; width: 22px; height: 30px; position: absolute; left: 154px; top: 40px; cursor: pointer;"
+            id="add"></div>
+        <div style="font-size: 12px; position: absolute;left: 80px; top: -1px; color: #666666; padding-right: 20px; z-index: 2; user-select: none;"
+            id="to">
+            <div id="toto">&nbsp天津&nbsp河西区&nbsp全区&nbsp1111111</div>
+            <div id="three"></div>
+        </div>
+        <div style="height: 200px; width: 210px;border: 1px solid #ccc; position: relative; left: 80px; top: 2px; z-index: 1; display: none; background-color: white;"
+            id="kuang">
+            <div style="height: 16px; width: 16px; position: absolute; left: 193px; top: 3px; cursor: pointer;" id="x">
+                <img src="https://res.suning.cn/project/cmsWeb/suning/wxmini/images/suning/fourth/cover-close.png"
+                    alt="" style="height: 100%; width: 100%;">
+            </div>
+            <div style="font-size: 12px; height: 150px; width: 210px; overflow: auto; position: absolute;top: 27px;"
+                id="p">
+                <p>
+                <div style="color: #f60;" class="p">&nbsp天津&nbsp河西区&nbsp全区&nbsp1111111</div>
+                </p>
+                <p>
+                <div style="color: #333;" class="p">&nbsp天津&nbsp河西区&nbsp全区&nbsp2222222</div>
+                </p>
+                <p>
+                <div style="color: #333;" class="p">&nbsp天津&nbsp河西区&nbsp全区&nbsp1111111</div>
+                </p>
+                <p>
+                <div style="color: #333;" class="p">&nbsp天津&nbsp河西区&nbsp全区&nbsp1111111</div>
+                </p>
+                <p>
+                <div style="color: #333;" class="p">&nbsp天津&nbsp河西区&nbsp全区&nbsp1111111</div>
+                </p>
+                <p>
+                <div style="color: #333;" class="p">&nbsp天津&nbsp河西区&nbsp全区&nbsp1111111</div>
+                </p>
+                <p>
+                <div style="color: #333;" class="p">&nbsp天津&nbsp河西区&nbsp全区&nbsp1111111</div>
+                </p>
+                <p>
+                <div style="color: #333;" class="p">&nbsp天津&nbsp河西区&nbsp全区&nbsp1111111</div>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a href="pay.html">
+        <div style="height: 40px; width: 115px; background-color: #663200; color: #fff; font: 16px microsoft yahei;font-weight: 600;border-radius: 3px; display: flex;justify-content: center;align-items: center; position: absolute; left: 570px; top: 420px; cursor: pointer; user-select: none;"
+            id="pay">
+            立即购买</div>
+    </a>
+    <div style="height: 40px; width: 135px; background-color: #ff5500; color: #fff; font: 16px microsoft yahei;font-weight: 600;border-radius: 3px; display: flex;justify-content: center;align-items: center; position: absolute; left: 720px; top: 420px; cursor: pointer; user-select: none;"
+        id="carin">
+        <div
+            style="height: 20px; width: 20px; background: url(https://res.suning.cn/project/pdsWeb/csspc2021/images/f-icons-ex1.png?v=1651907038)-1008px -698px;">
+        </div>
+        加入购物车
+    </div>
+    <div style="height: 400px; width: 400px; background: url(https://imgservice.suning.cn/uimg1/b2c/image/NWARC5cUs-zgaOJD-TSThw.jpg_800w_800h_4e); overflow: hidden; position: absolute; left: 540px; top: 191px; display: none; z-index: 3;"
+        id="box2">
+    </div>
+    <div style="position: relative; left: 300px; top: -200px; width: 988px; height: 1000px; border: 1px solid #eeeeee;">
+        <div id="grey">
+            <div class="tab" style="border-top:2px solid #f60; background-color: white;">商品详情</div>
+            <div class="tab">包装及参数</div>
+            <div class="tab">评价(8.6万+)</div>
+            <div class="tab">问答</div>
+            <div class="tab">售后保障</div>
+            <div id="gouwucar">
+                <div
+                    style="height: 20px; width: 20px; background: url(https://res.suning.cn/project/pdsWeb/csspc2021/images/f-icons-ex1.png?v=1651907038)-1008px -698px;">
+                </div>
+                加入购物车
+            </div>
+        </div>
+    </div>
+    <div style="height: 165px; width: 190px; border:1px solid #ff7000; position: relative; left: 90px; top: -1200px;">
+        <h4 style="display: flex;justify-content: center;align-items: center;">
+            <i
+                style="height: 17px; width: 14px; background: url(https://res.suning.cn/project/pdsWeb/csspc2021/images/f-icons-ex1.png?v=1651907038)-1270px -731px;"></i><span
+                style="color: #f60; font-size: 14px; padding-left: 6px;">苏宁自营</span>
+        </h4>
+        <div
+            style="width: 158px; height: 40px; font-size: 12px;position: absolute;color: #666666; padding: 0 0 12px;margin: 0 15px;border-bottom: 1px solid #eee;">
+            <div>商家:&nbsp&nbsp&nbsp<a href="" style="color: #333; text-decoration: none;">海尔苏宁自营旗舰店</a></div>
+            <div>&nbsp</div>
+            <div>联系:&nbsp&nbsp&nbsp<a href="" style="color: #333; text-decoration: none;"><img
+                        src="https://res.suning.cn/project/pdsWeb/csspc2021/images/header-contact-self.gif" alt="">
+                    联系客服</a></div>
+        </div>
+        <a href="">
+            <div
+                style="height: 26px; width: 167px;border: 1px solid #ff7000;border-radius: 3px; font: normal 12px/26px Microsoft YaHei;text-align: center;color: #ff7000; position: absolute; left: 11px; top: 125px;">
+                进入店铺
+            </div>
+        </a>
+    </div>
+</body>
+<script>
+    const load = document.getElementById('load');
+    const find = document.getElementById('find');
+    let onload = load.addEventListener('click', () => {
+        load.href = "load.html";
+    })
+    find.addEventListener('focus', () => {
+        if (find.style.color != 'black') {
+            find.style.color = 'black';
+            find.value = '';
+        }
+    })
+    find.addEventListener('blur', () => {
+        if (find.value == '') {
+            find.style.color = '#BBB';
+            find.value = '爆款每1000减100';
+        }
+    })
+    let me = document.getElementById('me')
+    let message = document.getElementById('message')
+    let money = document.getElementById('money')
+    let time = document.getElementById('time')
+    let tab = document.getElementById('tab')
+    let ma = document.getElementById('ma')
+    let music = document.getElementById('music')
+    let suggest = document.getElementById('suggest')
+    let ma2 = document.getElementById('ma2')
+    let backtop = document.getElementById('backtop')
+    let k_k = function (a, b) {
+        a.addEventListener('mouseover', () => {
+            a.style.background = `url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901) -26px ${b}`;
+            a.style.backgroundColor = '#ffaa01'
+        })
+        a.addEventListener('mouseleave', () => {
+            a.style.background = `url(https://res.suning.cn/public/v3/css/images-sidebar/sidebaricon.png?v=2021090901) 0 ${b}`;
+            a.style.backgroundColor = ''
+        })
+    }
+    k_k(me, 0);
+    k_k(message, '-23px');
+    k_k(money, '-47px');
+    k_k(time, '-70px');
+    k_k(tab, '-93px');
+    k_k(ma, '-290px');
+    k_k(music, '-118px');
+    k_k(suggest, '-140px');
+    k_k(ma2, '-165px');
+    k_k(backtop, '-259px');
+    document.getElementById('to').addEventListener('click', () => {
+        if (document.getElementById('kuang').style.display != 'block') {
+            document.getElementById('to').style.border = '1px solid #ccc';
+            document.getElementById('to').style.borderBottom = '1px solid white'
+            document.getElementById('kuang').style.display = 'block'
+        }
+        else {
+            document.getElementById('to').style.border = 'none';
+            document.getElementById('kuang').style.display = 'none'
+        }
+    })
+    document.getElementById('x').addEventListener('click', () => {
+        document.getElementById('to').style.border = 'none';
+        document.getElementById('kuang').style.display = 'none'
+    })
+    let a = document.getElementsByClassName('p')
+    for (let i = 0; i < a.length; i++) {
+        a[i].addEventListener('click', () => {
+            for (let j = 0; j < a.length; j++) {
+                if (i != j) {
+                    a[j].style.color = '#333'
+                }
+                else {
+                    a[j].style.color = '#f60';
+                }
+            }
+            document.getElementById('kuang').style.display = 'none'
+            document.getElementById('to').style.border = 'none'
+            document.getElementById('toto').innerHTML = a[i].innerHTML
+        })
+    }
+    let jian = document.getElementById('jian');
+    let add = document.getElementById('add');
+    let put = document.getElementById('put');
+    jian.addEventListener('click', () => {
+        if (put.value > 1) {
+            put.value--;
+            jian.style.backgroundPosition = '-1014px -668px'
+        }
+        if (put.value <= 1) {
+            jian.style.backgroundPosition = '-970px -668px'
+        }
+    })
+    add.addEventListener('click', () => {
+        put.value++;
+        if (put.value > 1) {
+            jian.style.backgroundPosition = '-1014px -668px'
+        }
+        else {
+            jian.style.backgroundPosition = '-970px -668px'
+        }
+    })
+
+    document.getElementById('pay').addEventListener('mouseover', () => {
+        document.getElementById('pay').style.backgroundColor = '#4b2500'
+    })
+    document.getElementById('pay').addEventListener('mouseleave', () => {
+        document.getElementById('pay').style.backgroundColor = '#663200'
+
+    })
+    document.getElementById('carin').addEventListener('mouseover', () => {
+        document.getElementById('carin').style.backgroundColor = '#ff3000'
+    })
+    document.getElementById('carin').addEventListener('mouseleave', () => {
+        document.getElementById('carin').style.backgroundColor = '#ff5500'
+    })
+    document.getElementById('gouwucar').addEventListener('mouseover', () => {
+        document.getElementById('gouwucar').style.backgroundColor = '#ff3000'
+    })
+    document.getElementById('gouwucar').addEventListener('mouseleave', () => {
+        document.getElementById('gouwucar').style.backgroundColor = '#ff5500'
+    })
+    let box1 = document.getElementById("small")
+    let box2 = document.getElementById("box2")
+
+    document.onmousemove = function (event) {
+        let left = event.pageX - 100;
+        let top = event.pageY - 100;
+        if (left <= 140) {
+            left = 140
+        }
+        if (left >= 338) {
+            left = 338
+        }
+        if (top <= 191) {
+            top = 191
+        }
+        if (top >= 389) {
+            top = 389
+        }
+        if (event.pageX <= 140 || event.pageX >= 538 || event.pageY <= 191 || event.pageY >= 589) {
+            box1.style.display = 'none'
+            box2.style.display = 'none'
+        }
+        else {
+            box1.style.display = 'block'
+            box2.style.display = 'block'
+        }
+        box1.style.left = left + 'px';
+        box1.style.top = top + 'px';
+        box2.style.backgroundPositionX = -((left - 140) * 2) + 'px';
+        box2.style.backgroundPositionY = -((top - 191) * 2) + 'px';
+
+    }
+    let tabb = document.getElementsByClassName('tab');
+    for (let i = 0; i < tabb.length; i++) {
+        tabb[i].addEventListener('click', () => {
+            for (let j = 0; j < tabb.length; j++) {
+                if (i != j) {
+                    tabb[j].style.border = 'none'
+                    tabb[j].style.backgroundColor = '#f7f7f7'
+                }
+                else {
+                    tabb[j].style.borderTop = '2px solid #f60'
+                    tabb[j].style.backgroundColor = 'white'
+                }
+            }
+        })
+    }
+    document.getElementById('pay').addEventListener('click', () => {
+        fetch('http://43.139.37.159:8080/shop/add', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify({
+                ID: 1,
+                Phone: 15354119918
+            })
+        })
+    })
+</script>
+
+</html>

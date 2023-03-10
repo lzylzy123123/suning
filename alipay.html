@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支付宝 - 网上支付 安全快速！</title>
+    <link rel="icon" href="https://i.alipayobjects.com/common/favicon/favicon.ico" type="image/x-icon" />
+</head>
+
+<body style="margin: 0; padding: 0; min-width: 1440px;min-height: 600px; max-width: 1440px; max-height: 600px;">
+    <div style="height: 26px; width: 100%; background-color: #81868b;"></div>
+    <div style="height: 60px; background-color: white; font-size: 16px; color: #676d70; font-family: 微软雅黑;">
+        <div
+            style="height: 40px; position: absolute; left: 250px; top: 35px; border-right: 1px solid #676d70; padding-right: 15px;">
+            <img src="https://gw.alipayobjects.com/mdn/rms_9e4c39/afts/img/A*Qys_QIJfGPgAAAAAAAAAAAAAARQnAQ" alt=""
+                style="height: 40px;">
+        </div>
+        <span style="position:absolute; left: 410px; top: 51px;">我的收银台</span>
+    </div>
+    <div
+        style="background-color: #eff0f1; width: auto; height: 700px; display: flex;align-items: center;justify-content: center;">
+        <div
+            style="height: 526px; width: 793px; background-color: white; border-top: 3px solid #b3b3b3; border-bottom: 3px solid #b3b3b3; display: flex;justify-content: center;align-items: center;">
+            <div style="position: relative; top: -230px; left: -40px;">
+                <div
+                    style="font-size: 12px; color: #4D4D4D; font-family: 宋体; position: absolute; width: 100px; left: 10px;">
+                    扫一扫付款(元)</div>
+                <div style="font-size: 26px; color: #f60; font-weight: 700; position: absolute; top: 15px; width: 230px; text-align: center; left: -70px;" id="mon">
+                    8098.00</div>
+            </div>
+            <img src="alipay.jpg" alt="" style="height: 350px; position: absolute; left: 500px;">
+            <img src="https://gw.alipayobjects.com/mdn/rms_9e4c39/afts/img/A*KlAPTbO_zAUAAAAAAAAAAAAAARQnAQ" alt=""
+                style="height: 200px; position: relative; left: 145px; top: -50px;">
+        </div>
+    </div>
+</body>
+<script>
+    function getcookie(key) {
+        var str = document.cookie;
+        var startIndex = str.indexOf(key);
+        var value = "";
+        if (startIndex == -1) {//找不到
+            return value;
+        }
+        var endIndex = str.indexOf(";", startIndex);
+        if (endIndex == -1) {//找不到
+            value = str.substring(startIndex + key.length + 1)
+        } else {
+            value = str.substring(startIndex + key.length + 1, endIndex)
+        }
+        return value;
+    }
+    let money = getcookie("money");
+    document.getElementById('mon').innerHTML=money+'.0';
+</script>
+
+</html>

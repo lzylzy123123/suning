@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.suning.com/favicon.ico" />
+    <title>苏宁易购(Suning.com)-家电家装成套购，专注服务省心购！</title>
+</head>
+<style>
+    #tool {
+        position: relative;
+        background-color: rgb(245, 245, 245);
+        height: 35px;
+        margin-top: -16px;
+        text-align: center;
+    }
+
+    #tool li {
+        display: inline-block;
+        list-style: none;
+        line-height: 35px;
+        padding: 0 9px;
+        font-size: 12px;
+        font-family: 微软雅黑;
+    }
+
+    #home {
+        cursor: pointer;
+        color: black;
+    }
+
+    #home:hover {
+        color: #f60;
+    }
+
+    #top div div {
+        color: white;
+        width: 100px;
+        float: left;
+        font-size: 14px;
+        text-align: center;
+        height: 40px;
+    }
+
+    #top div {
+        position: relative;
+        left: 180px;
+        top: 10px;
+        width: 600px;
+    }
+
+    .main {
+        width: 1070px;
+        height: 225px;
+        background-color: white;
+        position: relative;
+        left: 261px;
+        top: 15px;
+        border: 1px solid #ddd;
+    }
+
+    .one {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 10px solid transparent;
+        border-bottom: 10px solid white;
+        position: relative;
+        top: -825px;
+        left: 400px;
+    }
+
+    #three {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 5px solid transparent;
+        border-bottom: 5px solid #bbbbbb;
+        position: absolute;
+        top: 2px;
+    }
+
+    #down {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 5px solid transparent;
+        border-top: 5px solid #ffc898;
+        position: relative;
+        top: -1196px;
+        left: 541px;
+    }
+
+    #tap {
+        position: absolute;
+        /* padding: 20px 0 20px 20px; */
+        left: 390px;
+        top: 86px;
+        width: 222px;
+        /* margin-right: -40px; */
+        background: #FFF;
+        box-shadow: 1px 0 5px #ddd, -1px 0 5px #ddd;
+        /* z-index: 10; */
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #tap ul {
+        list-style-type: none;
+    }
+
+    #tap ul li {
+        margin: 15px 0;
+    }
+
+    #tap a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    #tap a:hover {
+        color: #F70;
+    }
+
+    #left {
+        width: 160px;
+        /* height: 298px; */
+        position: relative;
+        left: 90px;
+        top: -860px;
+        box-shadow: 0 2px 2px #e3e3e3, -1px 2px 2px #e3e3e3;
+    }
+
+    #left ul {
+        position: absolute;
+        top: 7px;
+    }
+
+    #left li {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    #left ul li::marker {
+        color: #f70;
+    }
+
+    #left a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #left a:hover {
+        color: #F70;
+    }
+
+    #bank {
+        background-color: #ffffff;
+        overflow: hidden;
+        max-height: 300px;
+        transition: 0.5s;
+    }
+
+    #main div div {
+        width: 242px;
+        height: 142px;
+        border: solid #DDD;
+        border-width: 0 1px 1px 1px;
+        margin-left: 20px;
+        /* margin-top: px; */
+    }
+
+    .ad2 div {
+        width: 242px;
+        height: 130px;
+        border: solid #DDD;
+        border-width: 0 1px 1px 1px;
+        margin-left: 20px;
+        display: none;
+        /* position: absolute; */
+    }
+
+    #new {
+        cursor: pointer;
+    }
+
+    #k ul {
+        position: relative;
+        left: -40px;
+        top: -16px;
+        float: left;
+        list-style-type: none;
+    }
+
+    #k li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        float: left;
+        width: 111px;
+        height: 38px;
+        font-size: 12px;
+        font-family: Simsun;
+        border-right: 1px solid #DDD;
+        font-weight: 400;
+        color: #333;
+        cursor: pointer;
+    }
+
+    #tan {
+        height: 398.59px;
+        width: 567px;
+        position: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        background: rgba(0, 0, 0, 0.2);
+        top: 200px;
+        left: 0px;
+        right: 0px;
+        display: none;
+    }
+
+    #tan>div {
+        margin: 6px;
+        background-color: #ffffff;
+        height: 386.594px;
+        width: 555px;
+    }
+
+    #tan-top {
+        height: 46px;
+        border-bottom: 1px solid #DDD;
+        width: 500px;
+        position: relative;
+        left: 26px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #tan-top>div div {
+        height: 28px;
+        width: 97px;
+        border: solid #DDD;
+        font-size: 14px;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-family: Simsun;
+        font-weight: 400;
+        color: #333;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    #tan-top>div {
+        position: relative;
+        top: 16px;
+    }
+
+    #bod {
+        position: relative;
+        left: 100px;
+        top: 20px;
+        font-size: 12px;
+        font-family: Simsun;
+    }
+
+    #bod div {
+        padding-top: 10px;
+    }
+
+    #bod div input {
+        font-size: 12px;
+        border: 1px solid #BBB;
+        outline: none;
+        height: 20px;
+        color: rgb(187, 187, 187);
+        width: 152px;
+        font-family: Simsun;
+    }
+
+    #button1 {
+        width: 77px;
+        height: 26px;
+        background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) no-repeat 0 -52px;
+        position: relative;
+        left: 60px;
+        top: 36px;
+        cursor: pointer;
+    }
+
+    #button1:hover {
+        background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) no-repeat -77px -52px;
+    }
+
+    #button2 {
+        width: 77px;
+        height: 16px;
+        background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) no-repeat 0 -26px;
+        position: relative;
+        left: 150px;
+        cursor: pointer;
+    }
+
+    #button2:hover {
+        background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) no-repeat -77px -26px;
+    }
+</style>
+
+<body style="margin: 0; padding: 0; min-width: 1440px;min-height: 600px; max-width: 1440px; max-height: 600px;">
+    <div id="tool" style="border-bottom: 1px solid #eee;">
+        <ul style="text-align: center; position: relative;">
+            <div style="position: absolute; left: 120px;">
+                <a href="suning.html" style="text-decoration: none;">
+                    <li id="home">返回首页</li>
+                </a>
+                <li>网站导航</li>
+                <li>商家入驻</li>
+                <li>客户服务</li>
+                <li>网页无障碍</li>
+                <li>position</li>
+            </div>
+            <div style="position: absolute; left: 720px;">
+                <li><a href="load.html" style="color: black; text-decoration: none;" id="load"
+                        onmouseout="this.style.color='black'" onmouseover="this.style.color='rgb(254, 115, 47)'">请登录</a>
+                </li>
+                <li><a href="zhuce.html" target="_blank" style="color: #f60; text-decoration: none; ">注册有礼</a></li>
+                <li>我的订单</li>
+                <li>我的易购</li>
+                <li>苏宁会员</li>
+                <li>购物车</li>
+                <li>易付宝</li>
+                <li>企业采购</li>
+                <li>手机苏宁</li>
+            </div>
+        </ul>
+    </div>
+    <div style="height: 60px; background-color: #ff7700; position: relative;" id="top">
+        <img src='https://res.suning.cn/project/msIndex/css/images/ms-logo.png'
+            style="position: absolute; left: 85px; top: 15px;">
+        <div>
+            <a href="back.html">
+                <div id="back">首页</div>
+            </a>
+            <a style="cursor: pointer;">
+                <div id="person">账户信息</div>
+            </a>
+            <a href="message.html">
+                <div id="message">消息</div>
+            </a>
+        </div>
+    </div>
+    <div style="height: 5px;"></div>
+    <div style="height: 800px; background-color: #f5f5f5;">
+        <div class="main" id="main">
+            <p style="font-size: 16px; font-weight: 700; font-family: 微软雅黑; color: #333;">&nbsp&nbsp&nbsp&nbsp地址管理</p>
+            <div id="ad" style="cursor: pointer; width: 242px;">
+                <div style="border: none; height: 6px; background: url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -194px; margin-top: 21px; width: 244px;"
+                    id="marg">
+                </div>
+                <div style="margin-top: 0px; position: relative;">
+                    <div
+                        style="background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)0 -12px; width: 14px; height: 14px; border: none; position: relative; top: 5px; left: -10px;">
+                    </div>
+                    <div
+                        style="border: none; height: 15px; width: 70px; font-size: 12px; font-family: Simsun; color: #F50; position: relative; left: 10px; top: -8px; font-weight: 400;">
+                        默认地址</div>
+                    <div style="height: 13px; width: 14px; background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px 0; border: none; position: relative; left: 202px; top: -23px; display: none; cursor: pointer;"
+                        id="pen"></div>
+                    <div style="height: 34px; width: 205px; border: none; border-bottom: 1px dashed #DDD; position: absolute; top: 25px; font-size: 12px; font-family: Simsun; line-height: 40px;"
+                        id="first">历飞羽&nbsp&nbsp153******18</div>
+                    <div style="border: none; width: 205px; font-size: 12px; font-family: Simsun; height: 60px; white-space:normal; word-break:break-all;overflow:hidden; position: absolute; top: 75px;"
+                        id="adr"></div>
+                </div>
+            </div>
+            <div style="position: absolute; left: 0px; top: 31px; height: 148px; border: none; margin-left: 20px;
+            margin-top: 27px;" id="ne"><img
+                    src="https://res.suning.cn/project/msIndex/address2.0/css/images/add-adder.png" alt="" id="new">
+            </div>
+        </div>
+        <div class="main" style="position: relative; top: 25px;">
+            <div style="height: 38px; background-color: #f6f6f6;" id="k">
+                <ul>
+                    <li style="background-color: #ffffff;"><span>全部地址</span></li>
+                    <li><span>配送地址</span></li>
+                    <li><span>自提地址</span></li>
+                </ul>
+            </div>
+            <div class="ad2" style="cursor: pointer; width: 242px; position: relative;">
+                <div style="border: none; height: 6px; background: url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -194px; margin-top: 21px; width: 244px;"
+                    class="marg2">
+                </div>
+                <div style="margin-top: 0px; position: absolute;">
+                    <div style="height: 13px; width: 14px; background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px 0; border: none; position: absolute; left: 204px; top: 5px; display: none; cursor: pointer;"
+                        class="pen2"></div>
+                    <div style="height: 34px; width: 205px; border: none; border-bottom: 1px dashed #DDD; position: absolute; top: 25px; font-size: 12px; font-family: Simsun; line-height: 40px;"
+                        class="first2">历飞羽&nbsp&nbsp153******18</div>
+                    <div style="border: none; width: 205px; font-size: 12px; font-family: Simsun; height: 60px; white-space:normal; word-break:break-all;overflow:hidden; position: absolute; top: 75px;"
+                        class="adr2"></div>
+                </div>
+            </div>
+            <div class="ad2" style="cursor: pointer; width: 242px; position: relative; left: 260px; top: -27px;">
+                <div style="border: none; height: 6px; background: url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -194px; margin-top: 21px; width: 244px;"
+                    class="marg2">
+                </div>
+                <div style="margin-top: 0px; position: absolute;">
+                    <div style="height: 13px; width: 14px; background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px 0; border: none; position: absolute; left: 204px; top: 5px; display: none; cursor: pointer;"
+                        class="pen2"></div>
+                    <div style="height: 34px; width: 205px; border: none; border-bottom: 1px dashed #DDD; position: absolute; top: 25px; font-size: 12px; font-family: Simsun; line-height: 40px;"
+                        class="first2">历飞羽&nbsp&nbsp153******18</div>
+                    <div style="border: none; width: 205px; font-size: 12px; font-family: Simsun; height: 60px; white-space:normal; word-break:break-all;overflow:hidden; position: absolute; top: 75px;"
+                        class="adr2"></div>
+                </div>
+            </div>
+            <div class="ad2" style="cursor: pointer; width: 242px; position: relative; left: 520px; top: -54px;">
+                <div style="border: none; height: 6px; background: url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -194px; margin-top: 21px; width: 244px;"
+                    class="marg2">
+                </div>
+                <div style="margin-top: 0px; position: absolute;">
+                    <div style="height: 13px; width: 14px; background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px 0; border: none; position: absolute; left: 204px; top: 5px; display: none; cursor: pointer;"
+                        class="pen2"></div>
+                    <div style="height: 34px; width: 205px; border: none; border-bottom: 1px dashed #DDD; position: absolute; top: 25px; font-size: 12px; font-family: Simsun; line-height: 40px;"
+                        class="first2">历飞羽&nbsp&nbsp153******18</div>
+                    <div style="border: none; width: 205px; font-size: 12px; font-family: Simsun; height: 60px; white-space:normal; word-break:break-all;overflow:hidden; position: absolute; top: 75px;"
+                        class="adr2"></div>
+                </div>
+            </div>
+            <div class="ad2" style="cursor: pointer; width: 242px; position: relative; left: 780px; top: -81px;">
+                <div style="border: none; height: 6px; background: url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -194px; margin-top: 21px; width: 244px;"
+                    class="marg2">
+                </div>
+                <div style="margin-top: 0px; position: absolute;">
+                    <div style="height: 13px; width: 14px; background: url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px 0; border: none; position: absolute; left: 204px; top: 5px; display: none; cursor: pointer;"
+                        class="pen2"></div>
+                    <div style="height: 34px; width: 205px; border: none; border-bottom: 1px dashed #DDD; position: absolute; top: 25px; font-size: 12px; font-family: Simsun; line-height: 40px;"
+                        class="first2">历飞羽&nbsp&nbsp153******18</div>
+                    <div style="border: none; width: 205px; font-size: 12px; font-family: Simsun; height: 60px; white-space:normal; word-break:break-all;overflow:hidden; position: absolute; top: 75px;"
+                        class="adr2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="one" id="k" style="border-bottom: 10px solid transparent;"></div>
+    <div class="one" style="top: -845px; left: 500px;" id="kk"></div>
+    <div class="one" style="top: -865px; left: 600px; border-bottom: 10px solid transparent;" id="kkk"></div>
+    <div id="left">
+        <div style="height: 278px; position: relative;" id="bank">
+            <ul>
+                <li
+                    style="line-height: 28px; font-size: 14px; font-family: Microsoft YaHei; font-weight: 700; color: #333; position: relative; left: -13px; list-style-type: none;">
+                    账户管理</li>
+                <li><a href="me.html">个人信息</a></li>
+                <li><a href="address.html" style="color: #F70;">地址管理</a></li>
+                <li><a href="">安全设置</a></li>
+                <li><a href="">我的易付宝</a></li>
+                <li><a href="">股东会员认证</a></li>
+                <li><a href="">绑定管理</a></li>
+                <li><a href="">个人增票</a></li>
+                <li><a href="">易付宝绑定管理</a></li>
+                <li><a href="">苏宁国际实名认证</a></li>
+            </ul>
+        </div>
+        <div style="height: 20px; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center; cursor: pointer; position: relative;"
+            id="thr">
+            <div id="three"></div>
+        </div>
+    </div>
+    <div id="down"></div>
+    <div id="tap">
+        <ul style="float: left;">
+            <li style="color: #666; font-size: 14px; font-family: Microsoft yahei; font-weight: bold;">安全设置</li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="change1.html">修改密码</a></li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="que1.html">安保问题管理</a></li>
+        </ul>
+        <ul style="float: left;">
+            <li style="color: #666; font-size: 14px; font-family: Microsoft yahei; font-weight: bold;">个人资料</li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="me.html">个人信息 </a></li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="address.html">地址管理</a></li>
+        </ul>
+    </div>
+    <div id="tan">
+        <div>
+            <div style="border-bottom: 1px solid #ccc; background: #eee;">
+                <div style="border-bottom: 0.01px solid #ccc; background: #eee; height: 27px;">
+                    <div style="font-size: 15px; font-family: Simsun; color: #333; font-weight: 700; width: 120px; padding-left: 10px; padding-top: 5px;"
+                        id="font">
+                        增加新地址 </div>
+                    <div style="height: 16px; width: 16px; position: absolute; left: 540px; top: 11px; cursor: pointer;"
+                        id="x"><img src="https://res.suning.cn/project/cmsWeb/suning/wxmini/images/suning/fourth/cover-close.png" alt="" style="height: 100%; width: 100%;">
+                    </div>
+                    <div id="tan-top">
+                        <div>
+                            <div style="border-bottom: 2px solid white;" id="normal">配送地址</div>
+                            <div style="background-color: #f6f6f6;" id="self">自提地址</div>
+                        </div>
+                    </div>
+                    <div id="bod">
+                        <div>
+                            收货人:&nbsp
+                            <input type="text" value="姓名,如:张三、Lily" class="list" style="color: rgb(187, 187, 187);">
+                            <span style="font-size: 13px; color: red; display: none;" id="one">*请输入姓名！</span>
+                        </div>
+                        <div>
+                            <span id="address">&nbsp地址:&nbsp</span>
+                            <input type="text" style="width: 300px;" value="请输入省，市，区/乡镇" class="list"
+                                style="color: rgb(187, 187, 187);">
+                        </div>
+                        <div style="position: relative; left: 60px;">
+                            <input type="text" style="width: 320px;" value="请输入街道名称或小区名称" class="list"
+                                style="color: rgb(187, 187, 187);">
+                        </div>
+                        <div>
+                            手机号码:
+                            <input type="text" value="手机号码（重要必填）" class="list" style="color: rgb(187, 187, 187);">
+                            <span style="font-size: 13px; color: red; display: none;" id="one3">*请输入电话号码</span>
+                        </div>
+                        <div>
+                            固定电话:
+                            <input type="text" value="选填" class="list" style="color: rgb(187, 187, 187);">
+                        </div>
+                        <p id="pp">&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" id="check">设为默认收货地址</p>
+                        <div style="position: relative; top: -40px; height: 0px;">
+                            <div id="button1"></div>
+                            <div id="button2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    let person = document.getElementById('person');
+    let tap = document.getElementById('tap');
+    let ne = document.getElementById('ne');
+    let tan = document.getElementById('tan');
+    person.addEventListener('mouseover', () => {
+        tap.style.maxHeight = '150px'
+    })
+    person.addEventListener('mouseleave', () => {
+        tap.addEventListener('mouseleave', () => {
+            tap.style.maxHeight = '0px'
+        })
+    })
+    let thr = document.getElementById('thr');
+    let bank = document.getElementById('bank');
+    let three = document.getElementById('three');
+    thr.addEventListener('click', () => {
+        if (bank.style.maxHeight == '12px') {
+            bank.style.maxHeight = '300px';
+            three.style.transform = 'rotate(0deg)';
+            three.style.top = '2px';
+        }
+        else {
+            bank.style.maxHeight = '12px';
+            three.style.transform = 'rotate(180deg)';
+            three.style.top = '8px';
+        }
+    })
+    let nw = document.getElementById('new');
+    nw.addEventListener('mouseover', () => {
+        nw.src = 'https://res.suning.cn/project/msIndex/address2.0/css/images/add-adder-hover.png'
+    })
+    nw.addEventListener('mouseleave', () => {
+        nw.src = 'https://res.suning.cn/project/msIndex/address2.0/css/images/add-adder.png'
+    })
+    let ad = document.getElementById('ad');
+    let marg = document.getElementById('marg');
+    let x = document.getElementById('x');
+    let ad2 = document.getElementsByClassName('ad2');
+    let marg2 = document.getElementsByClassName('marg2');
+    let pen2 = document.getElementsByClassName('pen2');
+    let first2 = document.getElementsByClassName('first2');
+    let adr2 = document.getElementsByClassName('adr2');
+    for (let i = 0; i < ad2.length; i++) {
+        ad2[i].addEventListener('mouseover', () => {
+            marg2[i].style.background = 'url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -188px'
+            pen2[i].style.display = 'block';
+            pen2[i].addEventListener('mouseover', () => {
+                pen2[i].style.background = 'url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px -12px'
+            })
+            pen2[i].addEventListener('mouseleave', () => {
+                pen2[i].style.background = 'url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px 0px'
+            })
+            pen2[i].addEventListener('click', () => {
+                let b = i / 10;
+                // console.log(b);
+                tan.style.display = 'block';
+                document.getElementById('tan-top').style.display = 'none';
+                document.getElementById('pp').style.display = 'none';
+                document.getElementById('tan').style.height = `${299 + b}px`;
+                // console.log(document.getElementById('tan').style.height);
+                document.querySelector('#tan>div').style.height = '288px';
+                document.getElementById('font').innerText = '修改收货地址';
+            })
+        })
+        ad2[i].addEventListener('mouseleave', () => {
+            marg2[i].style.background = 'url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -194px'
+            pen2[i].style.display = 'none';
+        })
+    }
+    ad.addEventListener('mouseover', () => {
+        marg.style.background = 'url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -188px'
+        document.getElementById('pen').style.display = 'block';
+    })
+    ad.addEventListener('mouseleave', () => {
+        marg.style.background = 'url(https://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png) 0 -194px'
+        document.getElementById('pen').style.display = 'none';
+    })
+
+    ne.addEventListener('click', () => {
+        tan.style.display = 'block';
+        // ne.style.left = '270px';
+    })
+    x.addEventListener('click', () => {
+        tan.style.display = 'none';
+        if (document.getElementById('tan').style.height <= '300px') {
+            document.getElementById('tan-top').style.display = 'flex';
+            document.getElementById('pp').style.display = 'block';
+            document.getElementById('tan').style.height = '398.59px';
+            document.querySelector('#tan>div').style.height = '386.594px';
+            document.getElementById('font').innerText = '增加新地址';
+        }
+    })
+    function kkk(k) {
+        let s = new String;
+        k.addEventListener('focus', () => {
+            s = k.value
+            if (k.style.color != 'black') {
+                k.style.color = 'black';
+                k.value = '';
+            }
+        })
+        k.addEventListener('blur', () => {
+            if (k.value == '') {
+                k.style.color = 'rgb(187, 187, 187)';
+                k.value = s;
+            }
+        })
+    }
+    kkk(document.getElementsByClassName('list')[0]);
+    kkk(document.getElementsByClassName('list')[1]);
+    kkk(document.getElementsByClassName('list')[2]);
+    kkk(document.getElementsByClassName('list')[3]);
+    kkk(document.getElementsByClassName('list')[4]);
+    let array = document.querySelectorAll('#bod input');
+    document.getElementById('button2').addEventListener('click', () => {
+        tan.style.display = 'none';
+        if (document.getElementById('tan').style.height <= '300px') {
+            document.getElementById('tan-top').style.display = 'flex';
+            document.getElementById('pp').style.display = 'block';
+            document.getElementById('tan').style.height = '398.59px';
+            document.querySelector('#tan>div').style.height = '386.594px';
+            document.getElementById('font').innerText = '增加新地址';
+        }
+    })
+    document.getElementById('button1').addEventListener('click', () => {
+        let A = array[3].value;
+        if (array[0].style.color != 'rgb(187, 187, 187)' && array[0].value != '' && array[1].value != '' && array[2].value != '' && array[3].value != '' && array[1].style.color != 'rgb(187, 187, 187)' && array[2].style.color != 'rgb(187, 187, 187)' && array[3].style.color != 'rgb(187, 187, 187)' && array[3].value.length == 11) {
+            tan.style.display = 'none';
+            if (ne.style.left == '0px' || document.getElementById('check').checked || document.getElementById('tan').style.height == '300px') {
+                ne.style.left = '270px';
+                document.getElementById('first').innerHTML = `${array[0].value}&nbsp&nbsp${A.substr(0, 3)}******${A.substr(-2, 2)}`;
+                document.getElementById('adr').innerHTML = `${array[1].value}&nbsp${array[2].value}`;
+            }
+            if (document.getElementById('tan').style.height == '300px') {
+                document.getElementById('tan-top').style.display = 'flex';
+                document.getElementById('pp').style.display = 'block';
+                document.getElementById('tan').style.height = '398.59px';
+                document.querySelector('#tan>div').style.height = '386.594px';
+                document.getElementById('font').innerText = '增加新地址';
+            }
+            // console.log(document.getElementById('tan').style.height < '300px');
+            if (document.getElementById('tan').style.height < '300px') {
+                let A = array[3].value; let num;
+                // console.log('nb');
+                if (document.getElementById('tan').style.height[4] == 'x') {
+                    // console.log('nb');
+                    num = 0;
+                }
+                else {
+                    num = document.getElementById('tan').style.height[4] / 1;
+                }
+                console.log(num);
+                first2[num].innerHTML = `${array[0].value}&nbsp&nbsp${A.substr(0, 3)}******${A.substr(-2, 2)}`;
+                adr2[num].innerHTML = `${array[1].value}&nbsp${array[2].value}`;
+            }
+        }
+        if (array[0].style.color == 'rgb(187, 187, 187)' || array[0].value == '') {
+            document.getElementById('one').style.display = 'inline'
+        }
+        else {
+            document.getElementById('one').style.display = 'none'
+        }
+        if (array[3].style.color == 'rgb(187, 187, 187)' || array[0].value == '') {
+            document.getElementById('one3').style.display = 'inline'
+        }
+        else {
+            if (array[3].value.length != 11) {
+                document.getElementById('one3').innerText = '电话号码格式不正确!';
+                document.getElementById('one3').style.display = 'inline'
+            }
+            else {
+                document.getElementById('one3').style.display = 'none'
+            }
+            
+        }
+    })
+    document.getElementById('normal').addEventListener('click', () => {
+        document.getElementById('normal').style.backgroundColor = 'white';
+        document.getElementById('normal').style.borderBottom = '2px solid white';
+        document.getElementById('self').style.backgroundColor = '#f6f6f6';
+        document.getElementById('self').style.borderBottom = '1px solid #DDD';
+        document.getElementById('address').innerHTML = '&nbsp地址:&nbsp'
+    })
+    document.getElementById('self').addEventListener('click', () => {
+        document.getElementById('self').style.backgroundColor = 'white';
+        document.getElementById('self').style.borderBottom = '2px solid white';
+        document.getElementById('normal').style.backgroundColor = '#f6f6f6';
+        document.getElementById('normal').style.borderBottom = '1px solid #DDD';
+        document.getElementById('address').innerHTML = '自提地址:'
+    })
+    let pen = document.getElementById('pen');
+    pen.addEventListener('mouseover', () => {
+        pen.style.background = 'url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px -12px'
+    })
+    pen.addEventListener('mouseleave', () => {
+        pen.style.background = 'url(http://res.suning.cn/project/msIndex/address2.0/css/images/newbg.png)-14px 0px'
+    })
+    pen.addEventListener('click', () => {
+        tan.style.display = 'block';
+        document.getElementById('tan-top').style.display = 'none';
+        document.getElementById('pp').style.display = 'none';
+        document.getElementById('tan').style.height = '300px';
+        document.querySelector('#tan>div').style.height = '288px';
+        document.getElementById('font').innerText = '修改收货地址';
+    })
+    let li = document.querySelectorAll('#k li');
+    for (var i = 0; i < li.length; i++) {
+        li[i].addEventListener('click', () => {
+            li[0].style.backgroundColor = '#f6f6f6';
+            li[1].style.backgroundColor = '#f6f6f6';
+            li[2].style.backgroundColor = '#f6f6f6';
+            // li[i].style.backgroundColor = 'white';
+        })
+    }
+    li[0].addEventListener('click', () => {
+        li[0].style.backgroundColor = 'white';
+
+    })
+    li[1].addEventListener('click', () => {
+        li[1].style.backgroundColor = 'white';
+    })
+    li[2].addEventListener('click', () => {
+        li[2].style.backgroundColor = 'white';
+    })
+    // console.log(Element.shadowRoot);
+</script>
+
+</html>

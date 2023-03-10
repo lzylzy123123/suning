@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://www.suning.com/favicon.ico" />
+    <title>苏宁易购(Suning.com)-家电家装成套购，专注服务省心购！</title>
+</head>
+<style>
+    #tool {
+        position: relative;
+        background-color: rgb(245, 245, 245);
+        height: 35px;
+        margin-top: -16px;
+        text-align: center;
+    }
+
+    #tool li {
+        display: inline-block;
+        list-style: none;
+        line-height: 35px;
+        padding: 0 9px;
+        font-size: 12px;
+        font-family: 微软雅黑;
+    }
+
+    #home {
+        cursor: pointer;
+        color: black;
+    }
+
+    #home:hover {
+        color: #f60;
+    }
+
+    #top div div {
+        color: white;
+        width: 100px;
+        float: left;
+        font-size: 14px;
+        text-align: center;
+        height: 40px;
+    }
+
+    #top div {
+        position: relative;
+        left: 180px;
+        top: 10px;
+        width: 600px;
+    }
+
+    #main {
+        width: 1070px;
+        height: 574px;
+        background-color: white;
+        position: relative;
+        left: 261px;
+        top: 15px;
+        border: 1px solid #ddd;
+    }
+
+    #po {
+        height: 30px;
+        width: 77px;
+        background-color: #ff9900;
+        border-radius: 3px;
+        color: white;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 32px;
+        border: 1px solid #ff9900;
+        cursor: pointer;
+    }
+
+    #delete {
+        height: 30px;
+        width: 77px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        font-size: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 100px;
+        cursor: pointer;
+    }
+
+    #po:hover {
+        background-color: #ffb500;
+    }
+
+    #delete:hover {
+        color: #f60;
+    }
+
+    .one {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 10px solid transparent;
+        border-bottom: 10px solid white;
+        position: relative;
+        top: -825px;
+        left: 400px;
+    }
+
+    #three {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 5px solid transparent;
+        border-bottom: 5px solid #bbbbbb;
+        position: absolute;
+        top: 2px;
+    }
+
+    #down {
+        width: 0;
+        height: 0;
+        line-height: 0;
+        font-size: 0;
+        border: 5px solid transparent;
+        border-top: 5px solid #ffc898;
+        position: absolute;
+        top: 63px;
+        left: 543px;
+    }
+
+    #tap {
+        position: absolute;
+        /* padding: 20px 0 20px 20px; */
+        left: 390px;
+        top: 86px;
+        width: 222px;
+        /* margin-right: -40px; */
+        background: #FFF;
+        box-shadow: 1px 0 5px #ddd, -1px 0 5px #ddd;
+        /* z-index: 10; */
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    #tap ul {
+        list-style-type: none;
+    }
+
+    #tap ul li {
+        margin: 15px 0;
+    }
+
+    #tap a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    #tap a:hover {
+        color: #F70;
+    }
+
+    #left {
+        width: 160px;
+        /* height: 298px; */
+        position: relative;
+        left: 90px;
+        top: -860px;
+        box-shadow: 0 2px 2px #e3e3e3, -1px 2px 2px #e3e3e3;
+    }
+
+    #left ul {
+        position: absolute;
+        top: 7px;
+    }
+
+    #left li {
+        font-size: 12px;
+        line-height: 24px;
+    }
+
+    #left ul li::marker {
+        color: #f70;
+    }
+
+    #left a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #left a:hover {
+        color: #F70;
+    }
+
+    #bank {
+        background-color: #ffffff;
+        overflow: hidden;
+        max-height: 300px;
+        transition: 0.5s;
+    }
+</style>
+
+<body style="margin: 0; padding: 0; min-width: 1440px;min-height: 600px; max-width: 1440px; max-height: 600px;">
+    <div id="tool" style="border-bottom: 1px solid #eee;">
+        <ul style="text-align: center; position: relative;">
+            <div style="position: absolute; left: 120px;">
+                <a href="suning.html" style="text-decoration: none;">
+                    <li id="home">返回首页</li>
+                </a>
+                <li>网站导航</li>
+                <li>商家入驻</li>
+                <li>客户服务</li>
+                <li>网页无障碍</li>
+                <li>position</li>
+            </div>
+            <div style="position: absolute; left: 720px;">
+                <li><a href="load.html" style="color: black; text-decoration: none;" id="load"
+                        onmouseout="this.style.color='black'" onmouseover="this.style.color='rgb(254, 115, 47)'">请登录</a>
+                </li>
+                <li><a href="zhuce.html" target="_blank" style="color: #f60; text-decoration: none; ">注册有礼</a></li>
+                <li>我的订单</li>
+                <li>我的易购</li>
+                <li>苏宁会员</li>
+                <li>购物车</li>
+                <li>易付宝</li>
+                <li>企业采购</li>
+                <li>手机苏宁</li>
+            </div>
+        </ul>
+    </div>
+    <div style="height: 60px; background-color: #ff7700; position: relative;" id="top">
+        <img src='https://res.suning.cn/project/msIndex/css/images/ms-logo.png'
+            style="position: absolute; left: 85px; top: 15px;">
+        <div>
+            <a href="back.html">
+                <div id="back">首页</div>
+            </a>
+            <a style="cursor: pointer;">
+                <div id="person">账户信息</div>
+            </a>
+            <a href="message.html">
+                <div id="message">消息</div>
+            </a>
+        </div>
+    </div>
+    <div style="height: 5px;"></div>
+    <div style="height: 800px; background-color: #f5f5f5;">
+        <div id="main">
+            <div style="height: 36px; background-color: #fafafa; color: #666; font-weight: bold;">
+                <span style="padding: 10px; padding-top: 6px; display: flex; align-items: center;">个人信息</span>
+            </div>
+            <div>
+                <div
+                    style="height: 185px; width: 969px; border-bottom:1px solid #f1f1f1; position: absolute; left: 90px;">
+                    <div
+                        style="height: 125px; width: 125px; border-radius: 64px; border: 3px solid #e3e3e3; margin-top: 30px; overflow: hidden; text-align: center;">
+                        <img src="https://image.suning.cn/uimg/cmf/cust_headpic/0000000000_01_120x120.jpg"
+                            style="margin-top: 2px;">
+                        <a href="" style="text-decoration: none;">
+                            <div
+                                style="height: 25px; width: 125px; background-color: black; position: relative; bottom: 26px; opacity: 0.5; ">
+                            </div>
+                            <div
+                                style="height: 25px; width: 125px; position: relative; bottom: 51px; font-size: 12px; color: white; font-family: 'Simsun'; display: flex; align-items: center; justify-content: center;">
+                                编辑头像</div>
+                        </a>
+                    </div>
+                </div>
+                <div style="height: 185px; width: 969px; position: absolute; left: 120px; top: 250px;">
+                    <span style="font-size: 14px; bottom: 0px; position: relative; color: #979797;">昵称:</span>
+                    <input style="width: 151px; height: 20px; border: 1px solid #bbbbbb; outline: none; color: #bbbbbb;"
+                        value="请设置昵称" id="name"></input>
+                    <p style="font-size: 14px; color: #979797;">手机: 153******18</p>
+                    <div id="po">
+                        保存
+                    </div>
+                    <div id="delete">
+                        删除
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="one" id="k" style="border-bottom: 10px solid transparent;"></div>
+    <div class="one" style="top: -845px; left: 500px;" id="kk"></div>
+    <div class="one" style="top: -865px; left: 600px; border-bottom: 10px solid transparent;" id="kkk"></div>
+    <div id="left">
+        <div style="height: 278px; position: relative;" id="bank">
+            <ul>
+                <li
+                    style="line-height: 28px; font-size: 14px; font-family: Microsoft YaHei; font-weight: 700; color: #333; position: relative; left: -13px; list-style-type: none;">
+                    账户管理</li>
+                <li><a href="me.html" style="color: #F70;">个人信息</a></li>
+                <li><a href="address.html">地址管理</a></li>
+                <li><a href="">安全设置</a></li>
+                <li><a href="">我的易付宝</a></li>
+                <li><a href="">股东会员认证</a></li>
+                <li><a href="">绑定管理</a></li>
+                <li><a href="">个人增票</a></li>
+                <li><a href="">易付宝绑定管理</a></li>
+                <li><a href="">苏宁国际实名认证</a></li>
+            </ul>
+        </div>
+        <div style="height: 20px; background-color: #f5f5f5; display: flex; justify-content: center; align-items: center; cursor: pointer; position: relative;"
+            id="thr">
+            <div id="three"></div>
+        </div>
+    </div>
+    <div id="down"></div>
+    <div id="tap">
+        <ul style="float: left;">
+            <li style="color: #666; font-size: 14px; font-family: Microsoft yahei; font-weight: bold;">安全设置</li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="change1.html">修改密码</a></li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="que1.html">安保问题管理</a></li>
+        </ul>
+        <ul style="float: left;">
+            <li style="color: #666; font-size: 14px; font-family: Microsoft yahei; font-weight: bold;">个人资料</li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="">个人信息 </a></li>
+            <li style="font-size: 12px; font-family: Simsun;"><a href="address.html">地址管理</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+    let na = document.getElementById('name');
+    let de = document.getElementById('delete');
+    na.addEventListener('focus', () => {
+        if (na.value == '请设置昵称') {
+            na.value = '';
+        }
+    })
+    na.addEventListener('blur', () => {
+        if (na.value == '') {
+            na.value = '请设置昵称';
+        }
+    })
+    de.addEventListener('click', () => {
+        na.value = '';
+    })
+    let person = document.getElementById('person');
+    let tap = document.getElementById('tap');
+    person.addEventListener('mouseover', () => {
+        tap.style.maxHeight = '150px'
+    })
+    person.addEventListener('mouseleave', () => {
+        tap.addEventListener('mouseleave', () => {
+            tap.style.maxHeight = '0px'
+        })
+
+    })
+    let thr = document.getElementById('thr');
+    let bank = document.getElementById('bank');
+    let three = document.getElementById('three');
+    thr.addEventListener('click', () => {
+        if (bank.style.maxHeight == '12px') {
+            bank.style.maxHeight = '300px';
+            three.style.transform = 'rotate(0deg)';
+            three.style.top = '2px';
+        }
+        else {
+            bank.style.maxHeight = '12px';
+            three.style.transform = 'rotate(180deg)';
+            three.style.top = '8px';
+        }
+    })
+</script>
+
+</html>
